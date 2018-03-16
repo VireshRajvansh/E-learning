@@ -1,0 +1,70 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "playlist",
+            "otherEntityName": "playList",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slug",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shortDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categories",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "premium",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "courseHrs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tagLine",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "premiumTill",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180316113856",
+    "entityTableName": "course",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

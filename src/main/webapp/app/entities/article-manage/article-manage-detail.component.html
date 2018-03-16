@@ -1,0 +1,50 @@
+
+<div *ngIf="article">
+    <h2><span jhiTranslate="eLearningApp.article.detail.title">Article</span> {{article.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.article.name">Name</span></dt>
+        <dd>
+            <span>{{article.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.slug">Slug</span></dt>
+        <dd>
+            <span>{{article.slug}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.type">Type</span></dt>
+        <dd>
+            <span>{{article.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.tagLine">Tag Line</span></dt>
+        <dd>
+            <span>{{article.tagLine}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.categories">Categories</span></dt>
+        <dd>
+            <span>{{article.categories}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.active">Active</span></dt>
+        <dd>
+            <span>{{article.active}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.article.user">User</span></dt>
+        <dd>
+            {{article.userLogin}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'article-manage/'+ article.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

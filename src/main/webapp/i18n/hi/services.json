@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "services" : {
+            "home": {
+                "title": "Services",
+                "createLabel": "नया Services बनाएँ",
+                "createOrEditLabel": "Services बनाएँ या संपादित करें",
+                "search": "Services खोजें"
+            },
+            "created": "एक नया Services [identifier: {{ param }}] तैयार है",
+            "updated": "एक Services [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Services [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Services [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Services"
+            },
+            "name": "Name"
+        }
+    }
+}

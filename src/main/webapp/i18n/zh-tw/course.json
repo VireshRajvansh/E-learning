@@ -1,0 +1,33 @@
+{
+    "eLearningApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "建立一筆新的 Course",
+                "createOrEditLabel": "建立或編輯 Course",
+                "search": "搜尋 Course"
+            },
+            "created": "新的 Course 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Course 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Course 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Course {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "categories": "Categories",
+            "active": "Active",
+            "premium": "Premium",
+            "courseHrs": "Course Hrs",
+            "tagLine": "Tag Line",
+            "premiumTill": "Premium Till",
+            "playlist": "Playlist",
+            "user": "User"
+        }
+    }
+}

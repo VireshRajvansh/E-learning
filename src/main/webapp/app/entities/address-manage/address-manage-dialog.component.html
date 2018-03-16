@@ -1,0 +1,75 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myAddressLabel" jhiTranslate="eLearningApp.address.home.createOrEditLabel">Create or edit a Address</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!address.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="address.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.type" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                [(ngModel)]="address.type" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.addressLine1" for="field_addressLine1">Address Line 1</label>
+            <input type="text" class="form-control" name="addressLine1" id="field_addressLine1"
+                [(ngModel)]="address.addressLine1" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.addressLine2" for="field_addressLine2">Address Line 2</label>
+            <input type="text" class="form-control" name="addressLine2" id="field_addressLine2"
+                [(ngModel)]="address.addressLine2" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.zipCode" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                [(ngModel)]="address.zipCode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                [(ngModel)]="address.city" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                [(ngModel)]="address.state" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.landmark" for="field_landmark">Landmark</label>
+            <input type="text" class="form-control" name="landmark" id="field_landmark"
+                [(ngModel)]="address.landmark" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                [(ngModel)]="address.country" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.lat" for="field_lat">Lat</label>
+            <input type="number" class="form-control" name="lat" id="field_lat"
+                [(ngModel)]="address.lat" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.address.lng" for="field_lng">Lng</label>
+            <input type="number" class="form-control" name="lng" id="field_lng"
+                [(ngModel)]="address.lng" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

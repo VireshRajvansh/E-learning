@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "Ստեղծել նոր Article",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Article",
+                "search": "Գտնել Article"
+            },
+            "created": "Նոր Article ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Article թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Article հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Article {{ id }}?"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "tagLine": "Tag Line",
+            "categories": "Categories",
+            "active": "Active",
+            "user": "User"
+        }
+    }
+}

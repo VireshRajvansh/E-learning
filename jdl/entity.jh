@@ -1,0 +1,258 @@
+entity Student {
+    name String required maxlength(50),
+    about String,
+    imageUrl String,
+    collegeYear Integer min(1900) max(2099),
+    dob LocalDate,
+    mobile String,
+    alternativeMobile String,
+    premium Boolean, // default false
+    active Boolean,
+    languagesSpoken String, // text
+    slug String required maxlength(100), // unique
+    premiumTill LocalDate,
+    referenceCode String,   //unique
+    signUpByReferenceCode String,
+    websiteURL String maxlength(250),
+    twitter String maxlength(250),
+    facebook String maxlength(250),
+    googlePlus String maxlength(250),
+    linkedIn String maxlength(250)
+
+}
+
+entity Teacher {
+    name String required maxlength(50),
+    about String,
+    imageUrl String,
+    collegeYear Integer min(1900) max(2099),
+    dob LocalDate,
+    mobile String,
+    alternativeMobile String,
+    premium Boolean, // default false
+    active Boolean,
+    languagesSpoken String, // text
+    slug String required maxlength(100), // unique
+    premiumTill LocalDate,
+    referenceCode String,   //unique
+    signUpByReferenceCode String,
+    websiteURL String maxlength(250),
+    twitter String maxlength(250),
+    facebook String maxlength(250),
+    googlePlus String maxlength(250),
+    linkedIn String maxlength(250)
+}
+
+entity Address {
+   type String,
+   addressLine1 String,
+   addressLine2 String,
+   zipCode String,
+   city String,
+   state String,
+   landmark String,
+   country String,
+   lat BigDecimal,
+   lng BigDecimal
+}
+
+entity State {
+    name String required maxlength(50),
+    slug String required maxlength(100) // unique
+}
+
+entity City {
+    name String required maxlength(50),
+    slug String required maxlength(100) // unique
+}
+
+relationship ManyToOne {
+    City{state(name)} to State{city}
+}
+
+entity Course {
+    name String,
+    slug String,
+    type String,
+    shortDesc String, // text
+    categories String,
+    active Boolean,
+    premium Boolean,
+    courseHrs String,
+    tagLine String maxlength(100),
+    premiumTill LocalDate
+}
+
+entity PlayList {
+   name String,
+   slug String,
+   type String,
+   length Integer,
+   duration String,
+   tagLine String maxlength(100),
+   active Boolean
+
+}
+
+relationship ManyToOne {
+   Course{playlist(name)} to PlayList
+}
+
+entity Quiz {
+    name String,
+    slug String,
+    text String,
+    type String,
+    shortDesc String, // text
+    isComplete Boolean,
+    tagLine String maxlength(100),
+    active Boolean,
+    selected Boolean
+}
+
+entity QuizAns {
+     answers String
+}
+
+relationship OneToOne {
+  Quiz{quizAns} to QuizAns{quiz},
+  UserSignUpByReferralCode{user} to User{userSignUpByReferralCode},
+  StripeCustomer{user} to User{stripeCustomer},
+  StripePayment{user} to User{stripePayment},
+  Student{stripeCustomer} to StripeCustomer{student},
+  Teacher{stripeCustomer} to StripeCustomer{teacher}
+}
+
+entity Article {
+    name String,
+    slug String,
+    type String,
+    tagLine String maxlength(100),
+    categories String,
+    active Boolean
+}
+
+entity Education {
+    name String required maxlength(100)
+}
+
+entity EducationCollege {
+    name String required maxlength(100)
+}
+
+entity Gallery {
+    imageUrl String
+}
+
+entity GalleryGroup {
+    name String
+}
+
+relationship OneToMany {
+    GalleryGroup{gallery} to Gallery{galleryGroup(name)}
+}
+
+
+relationship ManyToOne {
+    Student{user(login)} to User,
+    Teacher{user(login)} to User,
+    Student{address(id)} to Address,
+    Teacher{address(id)} to Address,
+    Quiz{user(login)} to User,
+    Article{user(login)} to User,
+    Course{user(login)} to User,
+    Student{college(name)} to EducationCollege{student},
+    Teacher{college(name)} to EducationCollege{teacher}
+}
+
+entity Services {
+    name String required maxlength(100)
+}
+
+entity Offer {
+    name String required maxlength(100)
+}
+
+entity Jobs {
+  name String,
+  run_on LocalDate,
+  type String,
+  cronExpress String,
+  isComplete Boolean,
+  msg String
+}
+
+
+entity TaxRate {
+    displayName String,
+    totalTaxInPct BigDecimal,
+    stateId Integer
+}
+
+
+entity StripeCustomer {
+    name    String  maxlength(100),
+    created ZonedDateTime,
+    email   String  maxlength(100),
+    currency String maxlength(3),
+    stripeCustomerId  String maxlength(50),
+    stripeSubscriptionId String maxlength(50),
+    stripeStatus  String maxlength(50),
+    plan    String maxlength(100),
+    ccBrand    String maxlength(50),
+    ccLast4   Integer max(10),
+    expMonth     String maxlength(20),
+    expYear     String maxlength(20),
+    isCancelled  Boolean,
+    cardId  String,
+    expectedExpiryDate LocalDate
+}
+
+entity  StripePayment {
+    stripeCustomerId  String maxlength(50),
+    invoiceId String,
+    planId   String,
+    planName String,
+    charge    String,
+    created   ZonedDateTime,
+    amount    Double,
+    planAmount   Double,
+    planCreated  ZonedDateTime,
+    planCurrency String maxlength(3),
+    planInterval String maxlength(50),
+    planIntervalCount  Integer max(6),
+    liveMode    Boolean,
+    paid    Boolean,
+    periodEnd    ZonedDateTime,
+    periodStart  ZonedDateTime,
+    subscriptionValue    String maxlength(50),
+    subtotal    Double,
+    tax    String maxlength(50),
+    taxPercent    String maxlength(50),
+    taxDisplayName String,
+    total    Double,
+    currency    String maxlength(3),
+    stripeCode   String maxlength(100),
+    isSuccess    Boolean,
+    invoiceNumber String
+}
+
+entity  StripeTransaction {
+    stripResponse String
+}
+
+entity CardExpiryReminder {
+    userId  Integer,
+    messageType String,
+    sendOnDate  LocalDate,
+    isComplete  Boolean,
+    refData  String
+}
+
+entity UserSignUpByReferralCode {
+     referralCode String
+}
+
+paginate * with pagination
+dto * with mapstruct
+angularSuffix * with -manage

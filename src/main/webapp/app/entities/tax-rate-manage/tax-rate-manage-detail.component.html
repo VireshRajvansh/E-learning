@@ -1,0 +1,34 @@
+
+<div *ngIf="taxRate">
+    <h2><span jhiTranslate="eLearningApp.taxRate.detail.title">Tax Rate</span> {{taxRate.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.taxRate.displayName">Display Name</span></dt>
+        <dd>
+            <span>{{taxRate.displayName}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.taxRate.totalTaxInPct">Total Tax In Pct</span></dt>
+        <dd>
+            <span>{{taxRate.totalTaxInPct}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.taxRate.stateId">State Id</span></dt>
+        <dd>
+            <span>{{taxRate.stateId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tax-rate-manage/'+ taxRate.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

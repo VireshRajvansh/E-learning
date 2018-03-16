@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "playList" : {
+            "home": {
+                "title": "PlayLists",
+                "createLabel": "Play List を追加",
+                "createOrEditLabel": "Play Listを追加または編集",
+                "search": "Search for Play List"
+            },
+            "created": "A new Play List is created with identifier {{ param }}",
+            "updated": "A Play List is updated with identifier {{ param }}",
+            "deleted": "A Play List is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Play List {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Play List"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "length": "Length",
+            "duration": "Duration",
+            "tagLine": "Tag Line",
+            "active": "Active"
+        }
+    }
+}

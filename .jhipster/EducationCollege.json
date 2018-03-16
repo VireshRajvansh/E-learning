@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "student",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "college"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "teacher",
+            "otherEntityName": "teacher",
+            "otherEntityRelationshipName": "college"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        }
+    ],
+    "changelogDate": "20180316113902",
+    "entityTableName": "education_college",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

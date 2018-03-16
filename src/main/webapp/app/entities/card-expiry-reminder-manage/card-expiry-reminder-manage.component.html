@@ -1,0 +1,87 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.cardExpiryReminder.home.title">Card Expiry Reminders</span>
+        <button class="btn btn-primary float-right jh-create-entity create-card-expiry-reminder-manage" [routerLink]="['/', { outlets: { popup: ['card-expiry-reminder-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.cardExpiryReminder.home.createLabel">
+            Create new Card Expiry Reminder
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.cardExpiryReminder.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="cardExpiryReminders">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="userId"><span jhiTranslate="eLearningApp.cardExpiryReminder.userId">User Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="messageType"><span jhiTranslate="eLearningApp.cardExpiryReminder.messageType">Message Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sendOnDate"><span jhiTranslate="eLearningApp.cardExpiryReminder.sendOnDate">Send On Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isComplete"><span jhiTranslate="eLearningApp.cardExpiryReminder.isComplete">Is Complete</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="refData"><span jhiTranslate="eLearningApp.cardExpiryReminder.refData">Ref Data</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cardExpiryReminder of cardExpiryReminders ;trackBy: trackId">
+                <td><a [routerLink]="['../card-expiry-reminder-manage', cardExpiryReminder.id ]">{{cardExpiryReminder.id}}</a></td>
+                <td>{{cardExpiryReminder.userId}}</td>
+                <td>{{cardExpiryReminder.messageType}}</td>
+                <td>{{cardExpiryReminder.sendOnDate | date:'mediumDate'}}</td>
+                <td>{{cardExpiryReminder.isComplete}}</td>
+                <td>{{cardExpiryReminder.refData}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../card-expiry-reminder-manage', cardExpiryReminder.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'card-expiry-reminder-manage/'+ cardExpiryReminder.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'card-expiry-reminder-manage/'+ cardExpiryReminder.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="cardExpiryReminders && cardExpiryReminders.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

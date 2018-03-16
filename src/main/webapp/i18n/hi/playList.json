@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "playList" : {
+            "home": {
+                "title": "PlayLists",
+                "createLabel": "नया Play List बनाएँ",
+                "createOrEditLabel": "Play List बनाएँ या संपादित करें",
+                "search": "Play List खोजें"
+            },
+            "created": "एक नया Play List [identifier: {{ param }}] तैयार है",
+            "updated": "एक Play List [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Play List [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Play List [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Play List"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "length": "Length",
+            "duration": "Duration",
+            "tagLine": "Tag Line",
+            "active": "Active"
+        }
+    }
+}

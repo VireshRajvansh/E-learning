@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "services" : {
+            "home": {
+                "title": "Services",
+                "createLabel": "Genera un nuovo Services",
+                "createOrEditLabel": "Genera o modifica un Services",
+                "search": "Cerca Services"
+            },
+            "created": "&Egrave; stato generato un nuovo Services con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Services identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Services con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Services {{ id }}?"
+            },
+            "detail": {
+                "title": "Services"
+            },
+            "name": "Name"
+        }
+    }
+}

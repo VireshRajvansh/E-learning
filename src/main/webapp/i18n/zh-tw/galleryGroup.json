@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "galleryGroup" : {
+            "home": {
+                "title": "Gallery Groups",
+                "createLabel": "建立一筆新的 Gallery Group",
+                "createOrEditLabel": "建立或編輯 Gallery Group",
+                "search": "搜尋 Gallery Group"
+            },
+            "created": "新的 Gallery Group 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Gallery Group 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Gallery Group 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Gallery Group {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Gallery Group"
+            },
+            "name": "Name",
+            "gallery": "Gallery"
+        }
+    }
+}

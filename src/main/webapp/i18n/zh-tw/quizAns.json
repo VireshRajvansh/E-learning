@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "Quiz Ans",
+                "createLabel": "建立一筆新的 Quiz Ans",
+                "createOrEditLabel": "建立或編輯 Quiz Ans",
+                "search": "搜尋 Quiz Ans"
+            },
+            "created": "新的 Quiz Ans 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Quiz Ans 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Quiz Ans 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Quiz Ans {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

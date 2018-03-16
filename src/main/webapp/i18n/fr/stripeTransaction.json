@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "stripeTransaction" : {
+            "home": {
+                "title": "StripeTransactions",
+                "createLabel": "Créer un nouveau Stripe Transaction",
+                "createOrEditLabel": "Créer ou éditer un Stripe Transaction",
+                "search": "Recherche pour Stripe Transaction"
+            },
+            "created": "Un nouveau Stripe Transaction a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Stripe Transaction avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Stripe Transaction avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Stripe Transaction {{ id }} ?"
+            },
+            "detail": {
+                "title": "Stripe Transaction"
+            },
+            "stripResponse": "Strip Response"
+        }
+    }
+}

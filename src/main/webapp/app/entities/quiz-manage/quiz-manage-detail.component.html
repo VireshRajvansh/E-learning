@@ -1,0 +1,68 @@
+
+<div *ngIf="quiz">
+    <h2><span jhiTranslate="eLearningApp.quiz.detail.title">Quiz</span> {{quiz.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.quiz.name">Name</span></dt>
+        <dd>
+            <span>{{quiz.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.slug">Slug</span></dt>
+        <dd>
+            <span>{{quiz.slug}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.text">Text</span></dt>
+        <dd>
+            <span>{{quiz.text}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.type">Type</span></dt>
+        <dd>
+            <span>{{quiz.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.shortDesc">Short Desc</span></dt>
+        <dd>
+            <span>{{quiz.shortDesc}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.isComplete">Is Complete</span></dt>
+        <dd>
+            <span>{{quiz.isComplete}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.tagLine">Tag Line</span></dt>
+        <dd>
+            <span>{{quiz.tagLine}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.active">Active</span></dt>
+        <dd>
+            <span>{{quiz.active}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.selected">Selected</span></dt>
+        <dd>
+            <span>{{quiz.selected}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.quizAns">Quiz Ans</span></dt>
+        <dd>
+            <div *ngIf="quiz.quizAnsId">
+                <a [routerLink]="['/quiz-ans-manage', quiz.quizAnsId]">{{quiz.quizAnsId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.quiz.user">User</span></dt>
+        <dd>
+            {{quiz.userLogin}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'quiz-manage/'+ quiz.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

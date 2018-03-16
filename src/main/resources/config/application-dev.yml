@@ -40,9 +40,9 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:file:./target/h2db/db/elearning;DB_CLOSE_DELAY=-1
-        username: eLearning
-        password:
+        url: jdbc:mysql://mysql.in.aquevix.com:3306/e-learning_dev?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password: windows2000
     h2:
         console:
             enabled: false

@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "QuizAns",
+                "createLabel": "नया Quiz Ans बनाएँ",
+                "createOrEditLabel": "Quiz Ans बनाएँ या संपादित करें",
+                "search": "Quiz Ans खोजें"
+            },
+            "created": "एक नया Quiz Ans [identifier: {{ param }}] तैयार है",
+            "updated": "एक Quiz Ans [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Quiz Ans [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Quiz Ans [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

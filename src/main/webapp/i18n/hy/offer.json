@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "offer" : {
+            "home": {
+                "title": "Offers",
+                "createLabel": "Ստեղծել նոր Offer",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Offer",
+                "search": "Գտնել Offer"
+            },
+            "created": "Նոր Offer ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Offer թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Offer հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Offer {{ id }}?"
+            },
+            "detail": {
+                "title": "Offer"
+            },
+            "name": "Name"
+        }
+    }
+}

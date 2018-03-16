@@ -1,0 +1,39 @@
+{
+    "eLearningApp": {
+        "stripeCustomer" : {
+            "home": {
+                "title": "Stripe Customers",
+                "createLabel": "Ստեղծել նոր Stripe Customer",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Stripe Customer",
+                "search": "Գտնել Stripe Customer"
+            },
+            "created": "Նոր Stripe Customer ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Stripe Customer թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Stripe Customer հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Stripe Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Stripe Customer"
+            },
+            "name": "Name",
+            "created": "Created",
+            "email": "Email",
+            "currency": "Currency",
+            "stripeCustomerId": "Stripe Customer Id",
+            "stripeSubscriptionId": "Stripe Subscription Id",
+            "stripeStatus": "Stripe Status",
+            "plan": "Plan",
+            "ccBrand": "Cc Brand",
+            "ccLast4": "Cc Last 4",
+            "expMonth": "Exp Month",
+            "expYear": "Exp Year",
+            "isCancelled": "Is Cancelled",
+            "cardId": "Card Id",
+            "expectedExpiryDate": "Expected Expiry Date",
+            "user": "User",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

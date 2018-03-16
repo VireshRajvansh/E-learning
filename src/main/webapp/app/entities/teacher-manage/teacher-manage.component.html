@@ -1,0 +1,137 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.teacher.home.title">Teachers</span>
+        <button class="btn btn-primary float-right jh-create-entity create-teacher-manage" [routerLink]="['/', { outlets: { popup: ['teacher-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.teacher.home.createLabel">
+            Create new Teacher
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.teacher.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="teachers">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="eLearningApp.teacher.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="about"><span jhiTranslate="eLearningApp.teacher.about">About</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="imageUrl"><span jhiTranslate="eLearningApp.teacher.imageUrl">Image Url</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="collegeYear"><span jhiTranslate="eLearningApp.teacher.collegeYear">College Year</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="dob"><span jhiTranslate="eLearningApp.teacher.dob">Dob</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="mobile"><span jhiTranslate="eLearningApp.teacher.mobile">Mobile</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="alternativeMobile"><span jhiTranslate="eLearningApp.teacher.alternativeMobile">Alternative Mobile</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="premium"><span jhiTranslate="eLearningApp.teacher.premium">Premium</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="active"><span jhiTranslate="eLearningApp.teacher.active">Active</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="languagesSpoken"><span jhiTranslate="eLearningApp.teacher.languagesSpoken">Languages Spoken</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="slug"><span jhiTranslate="eLearningApp.teacher.slug">Slug</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="premiumTill"><span jhiTranslate="eLearningApp.teacher.premiumTill">Premium Till</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="referenceCode"><span jhiTranslate="eLearningApp.teacher.referenceCode">Reference Code</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="signUpByReferenceCode"><span jhiTranslate="eLearningApp.teacher.signUpByReferenceCode">Sign Up By Reference Code</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="websiteURL"><span jhiTranslate="eLearningApp.teacher.websiteURL">Website URL</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="twitter"><span jhiTranslate="eLearningApp.teacher.twitter">Twitter</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="facebook"><span jhiTranslate="eLearningApp.teacher.facebook">Facebook</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="googlePlus"><span jhiTranslate="eLearningApp.teacher.googlePlus">Google Plus</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="linkedIn"><span jhiTranslate="eLearningApp.teacher.linkedIn">Linked In</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="stripeCustomerId"><span jhiTranslate="eLearningApp.teacher.stripeCustomer">Stripe Customer</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="userLogin"><span jhiTranslate="eLearningApp.teacher.user">User</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="addressId"><span jhiTranslate="eLearningApp.teacher.address">Address</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="collegeName"><span jhiTranslate="eLearningApp.teacher.college">College</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let teacher of teachers ;trackBy: trackId">
+                <td><a [routerLink]="['../teacher-manage', teacher.id ]">{{teacher.id}}</a></td>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.about}}</td>
+                <td>{{teacher.imageUrl}}</td>
+                <td>{{teacher.collegeYear}}</td>
+                <td>{{teacher.dob | date:'mediumDate'}}</td>
+                <td>{{teacher.mobile}}</td>
+                <td>{{teacher.alternativeMobile}}</td>
+                <td>{{teacher.premium}}</td>
+                <td>{{teacher.active}}</td>
+                <td>{{teacher.languagesSpoken}}</td>
+                <td>{{teacher.slug}}</td>
+                <td>{{teacher.premiumTill | date:'mediumDate'}}</td>
+                <td>{{teacher.referenceCode}}</td>
+                <td>{{teacher.signUpByReferenceCode}}</td>
+                <td>{{teacher.websiteURL}}</td>
+                <td>{{teacher.twitter}}</td>
+                <td>{{teacher.facebook}}</td>
+                <td>{{teacher.googlePlus}}</td>
+                <td>{{teacher.linkedIn}}</td>
+                <td>
+                    <div *ngIf="teacher.stripeCustomerId">
+                        <a [routerLink]="['../stripe-customer-manage', teacher.stripeCustomerId  ]" >{{teacher.stripeCustomerId}}</a>
+                    </div>
+                </td>
+                <td>
+                    {{teacher.userLogin}}
+                </td>
+                <td>
+                    <div *ngIf="teacher.addressId">
+                        <a [routerLink]="['../address-manage', teacher.addressId  ]" >{{teacher.addressId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="teacher.collegeId">
+                        <a [routerLink]="['../education-college-manage', teacher.collegeId  ]" >{{teacher.collegeName}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../teacher-manage', teacher.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'teacher-manage/'+ teacher.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'teacher-manage/'+ teacher.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="teachers && teachers.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

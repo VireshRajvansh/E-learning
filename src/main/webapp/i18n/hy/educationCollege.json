@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "educationCollege" : {
+            "home": {
+                "title": "Education Colleges",
+                "createLabel": "Ստեղծել նոր Education College",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Education College",
+                "search": "Գտնել Education College"
+            },
+            "created": "Նոր Education College ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Education College թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Education College հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Education College {{ id }}?"
+            },
+            "detail": {
+                "title": "Education College"
+            },
+            "name": "Name",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

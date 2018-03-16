@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "galleryGroup" : {
+            "home": {
+                "title": "GalleryGroups",
+                "createLabel": "नया Gallery Group बनाएँ",
+                "createOrEditLabel": "Gallery Group बनाएँ या संपादित करें",
+                "search": "Gallery Group खोजें"
+            },
+            "created": "एक नया Gallery Group [identifier: {{ param }}] तैयार है",
+            "updated": "एक Gallery Group [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Gallery Group [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Gallery Group [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Gallery Group"
+            },
+            "name": "Name",
+            "gallery": "Gallery"
+        }
+    }
+}

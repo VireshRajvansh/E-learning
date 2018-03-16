@@ -1,0 +1,31 @@
+{
+    "eLearningApp": {
+        "address" : {
+            "home": {
+                "title": "Addresses",
+                "createLabel": "Ստեղծել նոր Address",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Address",
+                "search": "Գտնել Address"
+            },
+            "created": "Նոր Address ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Address թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Address հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Address {{ id }}?"
+            },
+            "detail": {
+                "title": "Address"
+            },
+            "type": "Type",
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "zipCode": "Zip Code",
+            "city": "City",
+            "state": "State",
+            "landmark": "Landmark",
+            "country": "Country",
+            "lat": "Lat",
+            "lng": "Lng"
+        }
+    }
+}

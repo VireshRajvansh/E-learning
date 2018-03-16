@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "playList" : {
+            "home": {
+                "title": "Play Lists",
+                "createLabel": "Maak een nieuwe Play List",
+                "createOrEditLabel": "Maak of wijzig een Play List",
+                "search": "Search for Play List"
+            },
+            "created": "A new Play List is created with identifier {{ param }}",
+            "updated": "A Play List is updated with identifier {{ param }}",
+            "deleted": "A Play List is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Play List {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Play List"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "length": "Length",
+            "duration": "Duration",
+            "tagLine": "Tag Line",
+            "active": "Active"
+        }
+    }
+}

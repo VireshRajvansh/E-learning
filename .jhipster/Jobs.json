@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "runon",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cronExpress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isComplete",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "msg",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180316113907",
+    "entityTableName": "jobs",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

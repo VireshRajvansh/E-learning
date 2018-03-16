@@ -1,0 +1,44 @@
+{
+    "eLearningApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "建立一筆新的 Student",
+                "createOrEditLabel": "建立或編輯 Student",
+                "search": "搜尋 Student"
+            },
+            "created": "新的 Student 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Student 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Student 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Student {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "about": "About",
+            "imageUrl": "Image Url",
+            "collegeYear": "College Year",
+            "dob": "Dob",
+            "mobile": "Mobile",
+            "alternativeMobile": "Alternative Mobile",
+            "premium": "Premium",
+            "active": "Active",
+            "languagesSpoken": "Languages Spoken",
+            "slug": "Slug",
+            "premiumTill": "Premium Till",
+            "referenceCode": "Reference Code",
+            "signUpByReferenceCode": "Sign Up By Reference Code",
+            "websiteURL": "Website URL",
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "googlePlus": "Google Plus",
+            "linkedIn": "Linked In",
+            "stripeCustomer": "Stripe Customer",
+            "user": "User",
+            "address": "Address",
+            "college": "College"
+        }
+    }
+}

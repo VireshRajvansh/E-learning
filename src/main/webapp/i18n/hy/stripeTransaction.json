@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "stripeTransaction" : {
+            "home": {
+                "title": "Stripe Transactions",
+                "createLabel": "Ստեղծել նոր Stripe Transaction",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Stripe Transaction",
+                "search": "Գտնել Stripe Transaction"
+            },
+            "created": "Նոր Stripe Transaction ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Stripe Transaction թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Stripe Transaction հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Stripe Transaction {{ id }}?"
+            },
+            "detail": {
+                "title": "Stripe Transaction"
+            },
+            "stripResponse": "Strip Response"
+        }
+    }
+}

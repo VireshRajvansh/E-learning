@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "नया City बनाएँ",
+                "createOrEditLabel": "City बनाएँ या संपादित करें",
+                "search": "City खोजें"
+            },
+            "created": "एक नया City [identifier: {{ param }}] तैयार है",
+            "updated": "एक City [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "City [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "City [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "state": "State"
+        }
+    }
+}

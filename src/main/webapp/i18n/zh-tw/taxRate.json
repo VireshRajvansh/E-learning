@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "taxRate" : {
+            "home": {
+                "title": "Tax Rates",
+                "createLabel": "建立一筆新的 Tax Rate",
+                "createOrEditLabel": "建立或編輯 Tax Rate",
+                "search": "搜尋 Tax Rate"
+            },
+            "created": "新的 Tax Rate 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Tax Rate 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Tax Rate 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Tax Rate {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Tax Rate"
+            },
+            "displayName": "Display Name",
+            "totalTaxInPct": "Total Tax In Pct",
+            "stateId": "State Id"
+        }
+    }
+}

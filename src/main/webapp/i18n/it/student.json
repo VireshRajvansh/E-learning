@@ -1,0 +1,44 @@
+{
+    "eLearningApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Genera un nuovo Student",
+                "createOrEditLabel": "Genera o modifica un Student",
+                "search": "Cerca Student"
+            },
+            "created": "&Egrave; stato generato un nuovo Student con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Student identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Student con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "about": "About",
+            "imageUrl": "Image Url",
+            "collegeYear": "College Year",
+            "dob": "Dob",
+            "mobile": "Mobile",
+            "alternativeMobile": "Alternative Mobile",
+            "premium": "Premium",
+            "active": "Active",
+            "languagesSpoken": "Languages Spoken",
+            "slug": "Slug",
+            "premiumTill": "Premium Till",
+            "referenceCode": "Reference Code",
+            "signUpByReferenceCode": "Sign Up By Reference Code",
+            "websiteURL": "Website URL",
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "googlePlus": "Google Plus",
+            "linkedIn": "Linked In",
+            "stripeCustomer": "Stripe Customer",
+            "user": "User",
+            "address": "Address",
+            "college": "College"
+        }
+    }
+}

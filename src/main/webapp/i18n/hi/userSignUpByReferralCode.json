@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "userSignUpByReferralCode" : {
+            "home": {
+                "title": "UserSignUpByReferralCodes",
+                "createLabel": "नया User Sign Up By Referral Code बनाएँ",
+                "createOrEditLabel": "User Sign Up By Referral Code बनाएँ या संपादित करें",
+                "search": "User Sign Up By Referral Code खोजें"
+            },
+            "created": "एक नया User Sign Up By Referral Code [identifier: {{ param }}] तैयार है",
+            "updated": "एक User Sign Up By Referral Code [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "User Sign Up By Referral Code [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "User Sign Up By Referral Code [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "User Sign Up By Referral Code"
+            },
+            "referralCode": "Referral Code",
+            "user": "User"
+        }
+    }
+}

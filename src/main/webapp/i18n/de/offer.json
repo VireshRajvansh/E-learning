@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "offer" : {
+            "home": {
+                "title": "Offers",
+                "createLabel": "Offer erstellen",
+                "createOrEditLabel": "Offer erstellen oder bearbeiten",
+                "search": "Suche nach Offer"
+            },
+            "created": "Offer erstellt mit ID {{ param }}",
+            "updated": "Offer aktualisiert mit ID {{ param }}",
+            "deleted": "Offer gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Offer {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Offer"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "Create a new Education",
+                "createOrEditLabel": "Create or edit a Education",
+                "search": "Search for Education"
+            },
+            "created": "A new Education is created with identifier {{ param }}",
+            "updated": "A Education is updated with identifier {{ param }}",
+            "deleted": "A Education is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Education {{ id }}?"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

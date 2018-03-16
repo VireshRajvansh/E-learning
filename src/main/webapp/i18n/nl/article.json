@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "Maak een nieuwe Article",
+                "createOrEditLabel": "Maak of wijzig een Article",
+                "search": "Search for Article"
+            },
+            "created": "A new Article is created with identifier {{ param }}",
+            "updated": "A Article is updated with identifier {{ param }}",
+            "deleted": "A Article is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Article {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "tagLine": "Tag Line",
+            "categories": "Categories",
+            "active": "Active",
+            "user": "User"
+        }
+    }
+}

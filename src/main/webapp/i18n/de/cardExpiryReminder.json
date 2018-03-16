@@ -1,0 +1,26 @@
+{
+    "eLearningApp": {
+        "cardExpiryReminder" : {
+            "home": {
+                "title": "Card Expiry Reminders",
+                "createLabel": "Card Expiry Reminder erstellen",
+                "createOrEditLabel": "Card Expiry Reminder erstellen oder bearbeiten",
+                "search": "Suche nach Card Expiry Reminder"
+            },
+            "created": "Card Expiry Reminder erstellt mit ID {{ param }}",
+            "updated": "Card Expiry Reminder aktualisiert mit ID {{ param }}",
+            "deleted": "Card Expiry Reminder gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Card Expiry Reminder {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Card Expiry Reminder"
+            },
+            "userId": "User Id",
+            "messageType": "Message Type",
+            "sendOnDate": "Send On Date",
+            "isComplete": "Is Complete",
+            "refData": "Ref Data"
+        }
+    }
+}

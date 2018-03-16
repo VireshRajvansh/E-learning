@@ -1,0 +1,120 @@
+
+<div *ngIf="student">
+    <h2><span jhiTranslate="eLearningApp.student.detail.title">Student</span> {{student.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.student.name">Name</span></dt>
+        <dd>
+            <span>{{student.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.about">About</span></dt>
+        <dd>
+            <span>{{student.about}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.imageUrl">Image Url</span></dt>
+        <dd>
+            <span>{{student.imageUrl}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.collegeYear">College Year</span></dt>
+        <dd>
+            <span>{{student.collegeYear}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.dob">Dob</span></dt>
+        <dd>
+            <span>{{student.dob | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{student.mobile}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.alternativeMobile">Alternative Mobile</span></dt>
+        <dd>
+            <span>{{student.alternativeMobile}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.premium">Premium</span></dt>
+        <dd>
+            <span>{{student.premium}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.active">Active</span></dt>
+        <dd>
+            <span>{{student.active}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.languagesSpoken">Languages Spoken</span></dt>
+        <dd>
+            <span>{{student.languagesSpoken}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.slug">Slug</span></dt>
+        <dd>
+            <span>{{student.slug}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.premiumTill">Premium Till</span></dt>
+        <dd>
+            <span>{{student.premiumTill | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.referenceCode">Reference Code</span></dt>
+        <dd>
+            <span>{{student.referenceCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.signUpByReferenceCode">Sign Up By Reference Code</span></dt>
+        <dd>
+            <span>{{student.signUpByReferenceCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.websiteURL">Website URL</span></dt>
+        <dd>
+            <span>{{student.websiteURL}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.twitter">Twitter</span></dt>
+        <dd>
+            <span>{{student.twitter}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{student.facebook}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.googlePlus">Google Plus</span></dt>
+        <dd>
+            <span>{{student.googlePlus}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.linkedIn">Linked In</span></dt>
+        <dd>
+            <span>{{student.linkedIn}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.stripeCustomer">Stripe Customer</span></dt>
+        <dd>
+            <div *ngIf="student.stripeCustomerId">
+                <a [routerLink]="['/stripe-customer-manage', student.stripeCustomerId]">{{student.stripeCustomerId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.user">User</span></dt>
+        <dd>
+            {{student.userLogin}}
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.address">Address</span></dt>
+        <dd>
+            <div *ngIf="student.addressId">
+                <a [routerLink]="['/address-manage', student.addressId]">{{student.addressId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.student.college">College</span></dt>
+        <dd>
+            <div *ngIf="student.collegeId">
+                <a [routerLink]="['/education-college-manage', student.collegeId]">{{student.collegeName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student-manage/'+ student.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

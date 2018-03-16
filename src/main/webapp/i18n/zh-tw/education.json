@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "建立一筆新的 Education",
+                "createOrEditLabel": "建立或編輯 Education",
+                "search": "搜尋 Education"
+            },
+            "created": "新的 Education 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Education 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Education 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Education {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "eLearningApp": {
+        "stripeCustomer" : {
+            "home": {
+                "title": "Stripe Customers",
+                "createLabel": "建立一筆新的 Stripe Customer",
+                "createOrEditLabel": "建立或編輯 Stripe Customer",
+                "search": "搜尋 Stripe Customer"
+            },
+            "created": "新的 Stripe Customer 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Stripe Customer 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Stripe Customer 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Stripe Customer {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Stripe Customer"
+            },
+            "name": "Name",
+            "created": "Created",
+            "email": "Email",
+            "currency": "Currency",
+            "stripeCustomerId": "Stripe Customer Id",
+            "stripeSubscriptionId": "Stripe Subscription Id",
+            "stripeStatus": "Stripe Status",
+            "plan": "Plan",
+            "ccBrand": "Cc Brand",
+            "ccLast4": "Cc Last 4",
+            "expMonth": "Exp Month",
+            "expYear": "Exp Year",
+            "isCancelled": "Is Cancelled",
+            "cardId": "Card Id",
+            "expectedExpiryDate": "Expected Expiry Date",
+            "user": "User",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "Article を追加",
+                "createOrEditLabel": "Articleを追加または編集",
+                "search": "Search for Article"
+            },
+            "created": "A new Article is created with identifier {{ param }}",
+            "updated": "A Article is updated with identifier {{ param }}",
+            "deleted": "A Article is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Article {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "tagLine": "Tag Line",
+            "categories": "Categories",
+            "active": "Active",
+            "user": "User"
+        }
+    }
+}

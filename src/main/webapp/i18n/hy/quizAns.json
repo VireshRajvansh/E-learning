@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "Quiz Ans",
+                "createLabel": "Ստեղծել նոր Quiz Ans",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Quiz Ans",
+                "search": "Գտնել Quiz Ans"
+            },
+            "created": "Նոր Quiz Ans ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Quiz Ans թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Quiz Ans հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Quiz Ans {{ id }}?"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

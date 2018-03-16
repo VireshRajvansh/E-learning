@@ -1,0 +1,48 @@
+{
+    "eLearningApp": {
+        "stripePayment" : {
+            "home": {
+                "title": "Stripe Payments",
+                "createLabel": "建立一筆新的 Stripe Payment",
+                "createOrEditLabel": "建立或編輯 Stripe Payment",
+                "search": "搜尋 Stripe Payment"
+            },
+            "created": "新的 Stripe Payment 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Stripe Payment 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Stripe Payment 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Stripe Payment {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Stripe Payment"
+            },
+            "stripeCustomerId": "Stripe Customer Id",
+            "invoiceId": "Invoice Id",
+            "planId": "Plan Id",
+            "planName": "Plan Name",
+            "charge": "Charge",
+            "created": "Created",
+            "amount": "Amount",
+            "planAmount": "Plan Amount",
+            "planCreated": "Plan Created",
+            "planCurrency": "Plan Currency",
+            "planInterval": "Plan Interval",
+            "planIntervalCount": "Plan Interval Count",
+            "liveMode": "Live Mode",
+            "paid": "Paid",
+            "periodEnd": "Period End",
+            "periodStart": "Period Start",
+            "subscriptionValue": "Subscription Value",
+            "subtotal": "Subtotal",
+            "tax": "Tax",
+            "taxPercent": "Tax Percent",
+            "taxDisplayName": "Tax Display Name",
+            "total": "Total",
+            "currency": "Currency",
+            "stripeCode": "Stripe Code",
+            "isSuccess": "Is Success",
+            "invoiceNumber": "Invoice Number",
+            "user": "User"
+        }
+    }
+}

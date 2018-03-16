@@ -1,0 +1,33 @@
+{
+    "eLearningApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Course を追加",
+                "createOrEditLabel": "Courseを追加または編集",
+                "search": "Search for Course"
+            },
+            "created": "A new Course is created with identifier {{ param }}",
+            "updated": "A Course is updated with identifier {{ param }}",
+            "deleted": "A Course is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Course {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "categories": "Categories",
+            "active": "Active",
+            "premium": "Premium",
+            "courseHrs": "Course Hrs",
+            "tagLine": "Tag Line",
+            "premiumTill": "Premium Till",
+            "playlist": "Playlist",
+            "user": "User"
+        }
+    }
+}

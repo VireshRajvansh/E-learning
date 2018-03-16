@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "taxRate" : {
+            "home": {
+                "title": "Tax Rates",
+                "createLabel": "Tax Rate erstellen",
+                "createOrEditLabel": "Tax Rate erstellen oder bearbeiten",
+                "search": "Suche nach Tax Rate"
+            },
+            "created": "Tax Rate erstellt mit ID {{ param }}",
+            "updated": "Tax Rate aktualisiert mit ID {{ param }}",
+            "deleted": "Tax Rate gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Tax Rate {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Tax Rate"
+            },
+            "displayName": "Display Name",
+            "totalTaxInPct": "Total Tax In Pct",
+            "stateId": "State Id"
+        }
+    }
+}

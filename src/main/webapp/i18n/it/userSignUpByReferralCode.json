@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "userSignUpByReferralCode" : {
+            "home": {
+                "title": "UserSignUpByReferralCodes",
+                "createLabel": "Genera un nuovo User Sign Up By Referral Code",
+                "createOrEditLabel": "Genera o modifica un User Sign Up By Referral Code",
+                "search": "Cerca User Sign Up By Referral Code"
+            },
+            "created": "&Egrave; stato generato un nuovo User Sign Up By Referral Code con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato User Sign Up By Referral Code identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato User Sign Up By Referral Code con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare User Sign Up By Referral Code {{ id }}?"
+            },
+            "detail": {
+                "title": "User Sign Up By Referral Code"
+            },
+            "referralCode": "Referral Code",
+            "user": "User"
+        }
+    }
+}

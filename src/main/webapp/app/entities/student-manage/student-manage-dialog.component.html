@@ -1,0 +1,222 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myStudentLabel" jhiTranslate="eLearningApp.student.home.createOrEditLabel">Create or edit a Student</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!student.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="student.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="student.name" required maxlength="50"/>
+            <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.name?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.about" for="field_about">About</label>
+            <input type="text" class="form-control" name="about" id="field_about"
+                [(ngModel)]="student.about" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.imageUrl" for="field_imageUrl">Image Url</label>
+            <input type="text" class="form-control" name="imageUrl" id="field_imageUrl"
+                [(ngModel)]="student.imageUrl" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.collegeYear" for="field_collegeYear">College Year</label>
+            <input type="number" class="form-control" name="collegeYear" id="field_collegeYear"
+                [(ngModel)]="student.collegeYear" min="1900" max="2099"/>
+            <div [hidden]="!(editForm.controls.collegeYear?.dirty && editForm.controls.collegeYear?.invalid)">
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.collegeYear?.errors?.min" jhiTranslate="entity.validation.min" translateValues="{ min: 1900 }">
+                    This field should be at least 1900.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.collegeYear?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 2099 }">
+                    This field cannot be more than 2099.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.collegeYear?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.dob" for="field_dob">Dob</label>
+            <div class="input-group">
+                <input id="field_dob" type="text" class="form-control" name="dob" ngbDatepicker  #dobDp="ngbDatepicker" [(ngModel)]="student.dob"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="dobDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.mobile" for="field_mobile">Mobile</label>
+            <input type="text" class="form-control" name="mobile" id="field_mobile"
+                [(ngModel)]="student.mobile" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.alternativeMobile" for="field_alternativeMobile">Alternative Mobile</label>
+            <input type="text" class="form-control" name="alternativeMobile" id="field_alternativeMobile"
+                [(ngModel)]="student.alternativeMobile" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.premium" for="field_premium">Premium</label>
+            <input type="checkbox" class="form-control" name="premium" id="field_premium"
+                [(ngModel)]="student.premium" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.active" for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                [(ngModel)]="student.active" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.languagesSpoken" for="field_languagesSpoken">Languages Spoken</label>
+            <input type="text" class="form-control" name="languagesSpoken" id="field_languagesSpoken"
+                [(ngModel)]="student.languagesSpoken" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.slug" for="field_slug">Slug</label>
+            <input type="text" class="form-control" name="slug" id="field_slug"
+                [(ngModel)]="student.slug" required maxlength="100"/>
+            <div [hidden]="!(editForm.controls.slug?.dirty && editForm.controls.slug?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.slug?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.slug?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 100 }">
+                   This field cannot be longer than 100 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.premiumTill" for="field_premiumTill">Premium Till</label>
+            <div class="input-group">
+                <input id="field_premiumTill" type="text" class="form-control" name="premiumTill" ngbDatepicker  #premiumTillDp="ngbDatepicker" [(ngModel)]="student.premiumTill"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="premiumTillDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.referenceCode" for="field_referenceCode">Reference Code</label>
+            <input type="text" class="form-control" name="referenceCode" id="field_referenceCode"
+                [(ngModel)]="student.referenceCode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.signUpByReferenceCode" for="field_signUpByReferenceCode">Sign Up By Reference Code</label>
+            <input type="text" class="form-control" name="signUpByReferenceCode" id="field_signUpByReferenceCode"
+                [(ngModel)]="student.signUpByReferenceCode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.websiteURL" for="field_websiteURL">Website URL</label>
+            <input type="text" class="form-control" name="websiteURL" id="field_websiteURL"
+                [(ngModel)]="student.websiteURL" maxlength="250"/>
+            <div [hidden]="!(editForm.controls.websiteURL?.dirty && editForm.controls.websiteURL?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.websiteURL?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 250 }">
+                   This field cannot be longer than 250 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.twitter" for="field_twitter">Twitter</label>
+            <input type="text" class="form-control" name="twitter" id="field_twitter"
+                [(ngModel)]="student.twitter" maxlength="250"/>
+            <div [hidden]="!(editForm.controls.twitter?.dirty && editForm.controls.twitter?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.twitter?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 250 }">
+                   This field cannot be longer than 250 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.facebook" for="field_facebook">Facebook</label>
+            <input type="text" class="form-control" name="facebook" id="field_facebook"
+                [(ngModel)]="student.facebook" maxlength="250"/>
+            <div [hidden]="!(editForm.controls.facebook?.dirty && editForm.controls.facebook?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.facebook?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 250 }">
+                   This field cannot be longer than 250 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.googlePlus" for="field_googlePlus">Google Plus</label>
+            <input type="text" class="form-control" name="googlePlus" id="field_googlePlus"
+                [(ngModel)]="student.googlePlus" maxlength="250"/>
+            <div [hidden]="!(editForm.controls.googlePlus?.dirty && editForm.controls.googlePlus?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.googlePlus?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 250 }">
+                   This field cannot be longer than 250 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.linkedIn" for="field_linkedIn">Linked In</label>
+            <input type="text" class="form-control" name="linkedIn" id="field_linkedIn"
+                [(ngModel)]="student.linkedIn" maxlength="250"/>
+            <div [hidden]="!(editForm.controls.linkedIn?.dirty && editForm.controls.linkedIn?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.linkedIn?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 250 }">
+                   This field cannot be longer than 250 characters.
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.stripeCustomer" for="field_stripeCustomer">Stripe Customer</label>
+            <select class="form-control" id="field_stripeCustomer" name="stripeCustomer" [(ngModel)]="student.stripeCustomerId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="stripeCustomerOption.id" *ngFor="let stripeCustomerOption of stripecustomers; trackBy: trackStripeCustomerById">{{stripeCustomerOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" [(ngModel)]="student.userId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.address" for="field_address">Address</label>
+            <select class="form-control" id="field_address" name="address" [(ngModel)]="student.addressId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="addressOption.id" *ngFor="let addressOption of addresses; trackBy: trackAddressById">{{addressOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.student.college" for="field_college">College</label>
+            <select class="form-control" id="field_college" name="college" [(ngModel)]="student.collegeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="educationCollegeOption.id" *ngFor="let educationCollegeOption of educationcolleges; trackBy: trackEducationCollegeById">{{educationCollegeOption.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

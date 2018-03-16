@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Student.
+    -->
+    <changeSet id="20180316113851-1" author="jhipster">
+        <createTable tableName="student">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="about" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="image_url" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="college_year" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dob" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="mobile" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="alternative_mobile" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="premium" type="bit">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="active" type="bit">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="languages_spoken" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="slug" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="premium_till" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="reference_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="sign_up_by_reference_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="website_url" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="twitter" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="facebook" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="google_plus" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="linked_in" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+            <column name="stripe_customer_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
+            <column name="user_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="address_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="college_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

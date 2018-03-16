@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "offer" : {
+            "home": {
+                "title": "Offers",
+                "createLabel": "Offer を追加",
+                "createOrEditLabel": "Offerを追加または編集",
+                "search": "Search for Offer"
+            },
+            "created": "A new Offer is created with identifier {{ param }}",
+            "updated": "A Offer is updated with identifier {{ param }}",
+            "deleted": "A Offer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Offer {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Offer"
+            },
+            "name": "Name"
+        }
+    }
+}

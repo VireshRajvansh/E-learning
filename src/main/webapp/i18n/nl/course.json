@@ -1,0 +1,33 @@
+{
+    "eLearningApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Maak een nieuwe Course",
+                "createOrEditLabel": "Maak of wijzig een Course",
+                "search": "Search for Course"
+            },
+            "created": "A new Course is created with identifier {{ param }}",
+            "updated": "A Course is updated with identifier {{ param }}",
+            "deleted": "A Course is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Course {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "categories": "Categories",
+            "active": "Active",
+            "premium": "Premium",
+            "courseHrs": "Course Hrs",
+            "tagLine": "Tag Line",
+            "premiumTill": "Premium Till",
+            "playlist": "Playlist",
+            "user": "User"
+        }
+    }
+}

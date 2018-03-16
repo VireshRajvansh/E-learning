@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "stripeTransaction" : {
+            "home": {
+                "title": "StripeTransactions",
+                "createLabel": "नया Stripe Transaction बनाएँ",
+                "createOrEditLabel": "Stripe Transaction बनाएँ या संपादित करें",
+                "search": "Stripe Transaction खोजें"
+            },
+            "created": "एक नया Stripe Transaction [identifier: {{ param }}] तैयार है",
+            "updated": "एक Stripe Transaction [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Stripe Transaction [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Stripe Transaction [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Stripe Transaction"
+            },
+            "stripResponse": "Strip Response"
+        }
+    }
+}

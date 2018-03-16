@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "quiz",
+            "otherEntityName": "quiz",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "quizAns"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "answers",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180316113859",
+    "entityTableName": "quiz_ans",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

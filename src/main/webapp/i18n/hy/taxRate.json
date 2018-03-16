@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "taxRate" : {
+            "home": {
+                "title": "Tax Rates",
+                "createLabel": "Ստեղծել նոր Tax Rate",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Tax Rate",
+                "search": "Գտնել Tax Rate"
+            },
+            "created": "Նոր Tax Rate ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Tax Rate թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Tax Rate հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Tax Rate {{ id }}?"
+            },
+            "detail": {
+                "title": "Tax Rate"
+            },
+            "displayName": "Display Name",
+            "totalTaxInPct": "Total Tax In Pct",
+            "stateId": "State Id"
+        }
+    }
+}

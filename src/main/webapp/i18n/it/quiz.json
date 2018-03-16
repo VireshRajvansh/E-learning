@@ -1,0 +1,32 @@
+{
+    "eLearningApp": {
+        "quiz" : {
+            "home": {
+                "title": "Quizzes",
+                "createLabel": "Genera un nuovo Quiz",
+                "createOrEditLabel": "Genera o modifica un Quiz",
+                "search": "Cerca Quiz"
+            },
+            "created": "&Egrave; stato generato un nuovo Quiz con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Quiz identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Quiz con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Quiz {{ id }}?"
+            },
+            "detail": {
+                "title": "Quiz"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "text": "Text",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "isComplete": "Is Complete",
+            "tagLine": "Tag Line",
+            "active": "Active",
+            "selected": "Selected",
+            "quizAns": "Quiz Ans",
+            "user": "User"
+        }
+    }
+}

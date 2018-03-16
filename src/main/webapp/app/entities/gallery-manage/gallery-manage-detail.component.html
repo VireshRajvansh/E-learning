@@ -1,0 +1,32 @@
+
+<div *ngIf="gallery">
+    <h2><span jhiTranslate="eLearningApp.gallery.detail.title">Gallery</span> {{gallery.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.gallery.imageUrl">Image Url</span></dt>
+        <dd>
+            <span>{{gallery.imageUrl}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.gallery.galleryGroup">Gallery Group</span></dt>
+        <dd>
+            <div *ngIf="gallery.galleryGroupId">
+                <a [routerLink]="['/gallery-group-manage', gallery.galleryGroupId]">{{gallery.galleryGroupName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'gallery-manage/'+ gallery.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "नया Article बनाएँ",
+                "createOrEditLabel": "Article बनाएँ या संपादित करें",
+                "search": "Article खोजें"
+            },
+            "created": "एक नया Article [identifier: {{ param }}] तैयार है",
+            "updated": "एक Article [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Article [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Article [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "tagLine": "Tag Line",
+            "categories": "Categories",
+            "active": "Active",
+            "user": "User"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "Ստեղծել նոր City",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել City",
+                "search": "Գտնել City"
+            },
+            "created": "Նոր City ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "City թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "City հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել City {{ id }}?"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "state": "State"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "playList" : {
+            "home": {
+                "title": "Play Lists",
+                "createLabel": "建立一筆新的 Play List",
+                "createOrEditLabel": "建立或編輯 Play List",
+                "search": "搜尋 Play List"
+            },
+            "created": "新的 Play List 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Play List 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Play List 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Play List {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Play List"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "length": "Length",
+            "duration": "Duration",
+            "tagLine": "Tag Line",
+            "active": "Active"
+        }
+    }
+}

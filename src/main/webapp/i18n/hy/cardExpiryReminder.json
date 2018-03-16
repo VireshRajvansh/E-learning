@@ -1,0 +1,26 @@
+{
+    "eLearningApp": {
+        "cardExpiryReminder" : {
+            "home": {
+                "title": "Card Expiry Reminders",
+                "createLabel": "Ստեղծել նոր Card Expiry Reminder",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Card Expiry Reminder",
+                "search": "Գտնել Card Expiry Reminder"
+            },
+            "created": "Նոր Card Expiry Reminder ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Card Expiry Reminder թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Card Expiry Reminder հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Card Expiry Reminder {{ id }}?"
+            },
+            "detail": {
+                "title": "Card Expiry Reminder"
+            },
+            "userId": "User Id",
+            "messageType": "Message Type",
+            "sendOnDate": "Send On Date",
+            "isComplete": "Is Complete",
+            "refData": "Ref Data"
+        }
+    }
+}

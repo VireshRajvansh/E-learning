@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "Maak een nieuwe Education",
+                "createOrEditLabel": "Maak of wijzig een Education",
+                "search": "Search for Education"
+            },
+            "created": "A new Education is created with identifier {{ param }}",
+            "updated": "A Education is updated with identifier {{ param }}",
+            "deleted": "A Education is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Education {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

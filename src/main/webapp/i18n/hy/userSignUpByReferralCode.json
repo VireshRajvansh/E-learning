@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "userSignUpByReferralCode" : {
+            "home": {
+                "title": "User Sign Up By Referral Codes",
+                "createLabel": "Ստեղծել նոր User Sign Up By Referral Code",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել User Sign Up By Referral Code",
+                "search": "Գտնել User Sign Up By Referral Code"
+            },
+            "created": "Նոր User Sign Up By Referral Code ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "User Sign Up By Referral Code թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "User Sign Up By Referral Code հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել User Sign Up By Referral Code {{ id }}?"
+            },
+            "detail": {
+                "title": "User Sign Up By Referral Code"
+            },
+            "referralCode": "Referral Code",
+            "user": "User"
+        }
+    }
+}

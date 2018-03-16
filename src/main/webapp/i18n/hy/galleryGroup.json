@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "galleryGroup" : {
+            "home": {
+                "title": "Gallery Groups",
+                "createLabel": "Ստեղծել նոր Gallery Group",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Gallery Group",
+                "search": "Գտնել Gallery Group"
+            },
+            "created": "Նոր Gallery Group ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Gallery Group թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Gallery Group հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Gallery Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Gallery Group"
+            },
+            "name": "Name",
+            "gallery": "Gallery"
+        }
+    }
+}

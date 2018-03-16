@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "userSignUpByReferralCode"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "referralCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180316113913",
+    "entityTableName": "user_sign_up_by_referral_code",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "userSignUpByReferralCode" : {
+            "home": {
+                "title": "UserSignUpByReferralCodes",
+                "createLabel": "User Sign Up By Referral Code を追加",
+                "createOrEditLabel": "User Sign Up By Referral Codeを追加または編集",
+                "search": "Search for User Sign Up By Referral Code"
+            },
+            "created": "A new User Sign Up By Referral Code is created with identifier {{ param }}",
+            "updated": "A User Sign Up By Referral Code is updated with identifier {{ param }}",
+            "deleted": "A User Sign Up By Referral Code is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "User Sign Up By Referral Code {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "User Sign Up By Referral Code"
+            },
+            "referralCode": "Referral Code",
+            "user": "User"
+        }
+    }
+}

@@ -1,0 +1,72 @@
+
+<div *ngIf="course">
+    <h2><span jhiTranslate="eLearningApp.course.detail.title">Course</span> {{course.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.course.name">Name</span></dt>
+        <dd>
+            <span>{{course.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.slug">Slug</span></dt>
+        <dd>
+            <span>{{course.slug}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.type">Type</span></dt>
+        <dd>
+            <span>{{course.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.shortDesc">Short Desc</span></dt>
+        <dd>
+            <span>{{course.shortDesc}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.categories">Categories</span></dt>
+        <dd>
+            <span>{{course.categories}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.active">Active</span></dt>
+        <dd>
+            <span>{{course.active}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.premium">Premium</span></dt>
+        <dd>
+            <span>{{course.premium}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.courseHrs">Course Hrs</span></dt>
+        <dd>
+            <span>{{course.courseHrs}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.tagLine">Tag Line</span></dt>
+        <dd>
+            <span>{{course.tagLine}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.premiumTill">Premium Till</span></dt>
+        <dd>
+            <span>{{course.premiumTill | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.playlist">Playlist</span></dt>
+        <dd>
+            <div *ngIf="course.playlistId">
+                <a [routerLink]="['/play-list-manage', course.playlistId]">{{course.playlistName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.course.user">User</span></dt>
+        <dd>
+            {{course.userLogin}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'course-manage/'+ course.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

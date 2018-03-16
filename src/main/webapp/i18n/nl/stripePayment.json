@@ -1,0 +1,48 @@
+{
+    "eLearningApp": {
+        "stripePayment" : {
+            "home": {
+                "title": "Stripe Payments",
+                "createLabel": "Maak een nieuwe Stripe Payment",
+                "createOrEditLabel": "Maak of wijzig een Stripe Payment",
+                "search": "Search for Stripe Payment"
+            },
+            "created": "A new Stripe Payment is created with identifier {{ param }}",
+            "updated": "A Stripe Payment is updated with identifier {{ param }}",
+            "deleted": "A Stripe Payment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Stripe Payment {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Stripe Payment"
+            },
+            "stripeCustomerId": "Stripe Customer Id",
+            "invoiceId": "Invoice Id",
+            "planId": "Plan Id",
+            "planName": "Plan Name",
+            "charge": "Charge",
+            "created": "Created",
+            "amount": "Amount",
+            "planAmount": "Plan Amount",
+            "planCreated": "Plan Created",
+            "planCurrency": "Plan Currency",
+            "planInterval": "Plan Interval",
+            "planIntervalCount": "Plan Interval Count",
+            "liveMode": "Live Mode",
+            "paid": "Paid",
+            "periodEnd": "Period End",
+            "periodStart": "Period Start",
+            "subscriptionValue": "Subscription Value",
+            "subtotal": "Subtotal",
+            "tax": "Tax",
+            "taxPercent": "Tax Percent",
+            "taxDisplayName": "Tax Display Name",
+            "total": "Total",
+            "currency": "Currency",
+            "stripeCode": "Stripe Code",
+            "isSuccess": "Is Success",
+            "invoiceNumber": "Invoice Number",
+            "user": "User"
+        }
+    }
+}

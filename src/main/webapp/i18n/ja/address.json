@@ -1,0 +1,31 @@
+{
+    "eLearningApp": {
+        "address" : {
+            "home": {
+                "title": "Addresses",
+                "createLabel": "Address を追加",
+                "createOrEditLabel": "Addressを追加または編集",
+                "search": "Search for Address"
+            },
+            "created": "A new Address is created with identifier {{ param }}",
+            "updated": "A Address is updated with identifier {{ param }}",
+            "deleted": "A Address is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Address {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Address"
+            },
+            "type": "Type",
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "zipCode": "Zip Code",
+            "city": "City",
+            "state": "State",
+            "landmark": "Landmark",
+            "country": "Country",
+            "lat": "Lat",
+            "lng": "Lng"
+        }
+    }
+}

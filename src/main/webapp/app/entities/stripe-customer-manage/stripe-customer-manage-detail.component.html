@@ -1,0 +1,86 @@
+
+<div *ngIf="stripeCustomer">
+    <h2><span jhiTranslate="eLearningApp.stripeCustomer.detail.title">Stripe Customer</span> {{stripeCustomer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.name">Name</span></dt>
+        <dd>
+            <span>{{stripeCustomer.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.created">Created</span></dt>
+        <dd>
+            <span>{{stripeCustomer.created | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.email">Email</span></dt>
+        <dd>
+            <span>{{stripeCustomer.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.currency">Currency</span></dt>
+        <dd>
+            <span>{{stripeCustomer.currency}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.stripeCustomerId">Stripe Customer Id</span></dt>
+        <dd>
+            <span>{{stripeCustomer.stripeCustomerId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.stripeSubscriptionId">Stripe Subscription Id</span></dt>
+        <dd>
+            <span>{{stripeCustomer.stripeSubscriptionId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.stripeStatus">Stripe Status</span></dt>
+        <dd>
+            <span>{{stripeCustomer.stripeStatus}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.plan">Plan</span></dt>
+        <dd>
+            <span>{{stripeCustomer.plan}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.ccBrand">Cc Brand</span></dt>
+        <dd>
+            <span>{{stripeCustomer.ccBrand}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.ccLast4">Cc Last 4</span></dt>
+        <dd>
+            <span>{{stripeCustomer.ccLast4}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.expMonth">Exp Month</span></dt>
+        <dd>
+            <span>{{stripeCustomer.expMonth}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.expYear">Exp Year</span></dt>
+        <dd>
+            <span>{{stripeCustomer.expYear}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.isCancelled">Is Cancelled</span></dt>
+        <dd>
+            <span>{{stripeCustomer.isCancelled}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.cardId">Card Id</span></dt>
+        <dd>
+            <span>{{stripeCustomer.cardId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.expectedExpiryDate">Expected Expiry Date</span></dt>
+        <dd>
+            <span>{{stripeCustomer.expectedExpiryDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripeCustomer.user">User</span></dt>
+        <dd>
+            {{stripeCustomer.userId}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'stripe-customer-manage/'+ stripeCustomer.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

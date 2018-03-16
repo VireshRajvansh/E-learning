@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "Quiz Ans",
+                "createLabel": "Quiz Ans erstellen",
+                "createOrEditLabel": "Quiz Ans erstellen oder bearbeiten",
+                "search": "Suche nach Quiz Ans"
+            },
+            "created": "Quiz Ans erstellt mit ID {{ param }}",
+            "updated": "Quiz Ans aktualisiert mit ID {{ param }}",
+            "deleted": "Quiz Ans gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Quiz Ans {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "eLearningApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "नया Student बनाएँ",
+                "createOrEditLabel": "Student बनाएँ या संपादित करें",
+                "search": "Student खोजें"
+            },
+            "created": "एक नया Student [identifier: {{ param }}] तैयार है",
+            "updated": "एक Student [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Student [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Student [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "about": "About",
+            "imageUrl": "Image Url",
+            "collegeYear": "College Year",
+            "dob": "Dob",
+            "mobile": "Mobile",
+            "alternativeMobile": "Alternative Mobile",
+            "premium": "Premium",
+            "active": "Active",
+            "languagesSpoken": "Languages Spoken",
+            "slug": "Slug",
+            "premiumTill": "Premium Till",
+            "referenceCode": "Reference Code",
+            "signUpByReferenceCode": "Sign Up By Reference Code",
+            "websiteURL": "Website URL",
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "googlePlus": "Google Plus",
+            "linkedIn": "Linked In",
+            "stripeCustomer": "Stripe Customer",
+            "user": "User",
+            "address": "Address",
+            "college": "College"
+        }
+    }
+}

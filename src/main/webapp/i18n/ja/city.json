@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "City を追加",
+                "createOrEditLabel": "Cityを追加または編集",
+                "search": "Search for City"
+            },
+            "created": "A new City is created with identifier {{ param }}",
+            "updated": "A City is updated with identifier {{ param }}",
+            "deleted": "A City is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "City {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "state": "State"
+        }
+    }
+}

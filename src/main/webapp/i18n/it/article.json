@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "Genera un nuovo Article",
+                "createOrEditLabel": "Genera o modifica un Article",
+                "search": "Cerca Article"
+            },
+            "created": "&Egrave; stato generato un nuovo Article con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Article identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Article con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Article {{ id }}?"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "tagLine": "Tag Line",
+            "categories": "Categories",
+            "active": "Active",
+            "user": "User"
+        }
+    }
+}

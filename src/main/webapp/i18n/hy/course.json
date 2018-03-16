@@ -1,0 +1,33 @@
+{
+    "eLearningApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Ստեղծել նոր Course",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Course",
+                "search": "Գտնել Course"
+            },
+            "created": "Նոր Course ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Course թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Course հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "categories": "Categories",
+            "active": "Active",
+            "premium": "Premium",
+            "courseHrs": "Course Hrs",
+            "tagLine": "Tag Line",
+            "premiumTill": "Premium Till",
+            "playlist": "Playlist",
+            "user": "User"
+        }
+    }
+}

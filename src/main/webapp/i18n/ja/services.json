@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "services" : {
+            "home": {
+                "title": "Services",
+                "createLabel": "Services を追加",
+                "createOrEditLabel": "Servicesを追加または編集",
+                "search": "Search for Services"
+            },
+            "created": "A new Services is created with identifier {{ param }}",
+            "updated": "A Services is updated with identifier {{ param }}",
+            "deleted": "A Services is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Services {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Services"
+            },
+            "name": "Name"
+        }
+    }
+}

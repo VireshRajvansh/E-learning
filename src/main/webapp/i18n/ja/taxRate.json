@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "taxRate" : {
+            "home": {
+                "title": "TaxRates",
+                "createLabel": "Tax Rate を追加",
+                "createOrEditLabel": "Tax Rateを追加または編集",
+                "search": "Search for Tax Rate"
+            },
+            "created": "A new Tax Rate is created with identifier {{ param }}",
+            "updated": "A Tax Rate is updated with identifier {{ param }}",
+            "deleted": "A Tax Rate is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tax Rate {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Tax Rate"
+            },
+            "displayName": "Display Name",
+            "totalTaxInPct": "Total Tax In Pct",
+            "stateId": "State Id"
+        }
+    }
+}

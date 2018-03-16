@@ -1,0 +1,27 @@
+{
+    "eLearningApp": {
+        "jobs" : {
+            "home": {
+                "title": "Jobs",
+                "createLabel": "Ստեղծել նոր Jobs",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Jobs",
+                "search": "Գտնել Jobs"
+            },
+            "created": "Նոր Jobs ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Jobs թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Jobs հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Jobs {{ id }}?"
+            },
+            "detail": {
+                "title": "Jobs"
+            },
+            "name": "Name",
+            "runon": "Runon",
+            "type": "Type",
+            "cronExpress": "Cron Express",
+            "isComplete": "Is Complete",
+            "msg": "Msg"
+        }
+    }
+}

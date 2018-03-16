@@ -1,0 +1,26 @@
+{
+    "eLearningApp": {
+        "cardExpiryReminder" : {
+            "home": {
+                "title": "CardExpiryReminders",
+                "createLabel": "नया Card Expiry Reminder बनाएँ",
+                "createOrEditLabel": "Card Expiry Reminder बनाएँ या संपादित करें",
+                "search": "Card Expiry Reminder खोजें"
+            },
+            "created": "एक नया Card Expiry Reminder [identifier: {{ param }}] तैयार है",
+            "updated": "एक Card Expiry Reminder [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Card Expiry Reminder [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Card Expiry Reminder [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Card Expiry Reminder"
+            },
+            "userId": "User Id",
+            "messageType": "Message Type",
+            "sendOnDate": "Send On Date",
+            "isComplete": "Is Complete",
+            "refData": "Ref Data"
+        }
+    }
+}

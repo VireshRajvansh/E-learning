@@ -1,0 +1,90 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myQuizLabel" jhiTranslate="eLearningApp.quiz.home.createOrEditLabel">Create or edit a Quiz</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!quiz.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="quiz.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="quiz.name" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.slug" for="field_slug">Slug</label>
+            <input type="text" class="form-control" name="slug" id="field_slug"
+                [(ngModel)]="quiz.slug" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.text" for="field_text">Text</label>
+            <input type="text" class="form-control" name="text" id="field_text"
+                [(ngModel)]="quiz.text" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.type" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                [(ngModel)]="quiz.type" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.shortDesc" for="field_shortDesc">Short Desc</label>
+            <input type="text" class="form-control" name="shortDesc" id="field_shortDesc"
+                [(ngModel)]="quiz.shortDesc" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.isComplete" for="field_isComplete">Is Complete</label>
+            <input type="checkbox" class="form-control" name="isComplete" id="field_isComplete"
+                [(ngModel)]="quiz.isComplete" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.tagLine" for="field_tagLine">Tag Line</label>
+            <input type="text" class="form-control" name="tagLine" id="field_tagLine"
+                [(ngModel)]="quiz.tagLine" maxlength="100"/>
+            <div [hidden]="!(editForm.controls.tagLine?.dirty && editForm.controls.tagLine?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.tagLine?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 100 }">
+                   This field cannot be longer than 100 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.active" for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                [(ngModel)]="quiz.active" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.selected" for="field_selected">Selected</label>
+            <input type="checkbox" class="form-control" name="selected" id="field_selected"
+                [(ngModel)]="quiz.selected" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.quizAns" for="field_quizAns">Quiz Ans</label>
+            <select class="form-control" id="field_quizAns" name="quizAns" [(ngModel)]="quiz.quizAnsId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="quizAnsOption.id" *ngFor="let quizAnsOption of quizans; trackBy: trackQuizAnsById">{{quizAnsOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.quiz.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" [(ngModel)]="quiz.userId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

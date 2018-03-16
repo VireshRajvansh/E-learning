@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "Genera un nuovo City",
+                "createOrEditLabel": "Genera o modifica un City",
+                "search": "Cerca City"
+            },
+            "created": "&Egrave; stato generato un nuovo City con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato City identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato City con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare City {{ id }}?"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "state": "State"
+        }
+    }
+}

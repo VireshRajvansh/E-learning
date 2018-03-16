@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "services" : {
+            "home": {
+                "title": "Services",
+                "createLabel": "Create a new Services",
+                "createOrEditLabel": "Create or edit a Services",
+                "search": "Search for Services"
+            },
+            "created": "A new Services is created with identifier {{ param }}",
+            "updated": "A Services is updated with identifier {{ param }}",
+            "deleted": "A Services is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Services {{ id }}?"
+            },
+            "detail": {
+                "title": "Services"
+            },
+            "name": "Name"
+        }
+    }
+}

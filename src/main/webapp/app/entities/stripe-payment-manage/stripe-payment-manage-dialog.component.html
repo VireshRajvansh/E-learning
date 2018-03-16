@@ -1,0 +1,228 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myStripePaymentLabel" jhiTranslate="eLearningApp.stripePayment.home.createOrEditLabel">Create or edit a Stripe Payment</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!stripePayment.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="stripePayment.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.stripeCustomerId" for="field_stripeCustomerId">Stripe Customer Id</label>
+            <input type="text" class="form-control" name="stripeCustomerId" id="field_stripeCustomerId"
+                [(ngModel)]="stripePayment.stripeCustomerId" maxlength="50"/>
+            <div [hidden]="!(editForm.controls.stripeCustomerId?.dirty && editForm.controls.stripeCustomerId?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.stripeCustomerId?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.invoiceId" for="field_invoiceId">Invoice Id</label>
+            <input type="text" class="form-control" name="invoiceId" id="field_invoiceId"
+                [(ngModel)]="stripePayment.invoiceId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planId" for="field_planId">Plan Id</label>
+            <input type="text" class="form-control" name="planId" id="field_planId"
+                [(ngModel)]="stripePayment.planId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planName" for="field_planName">Plan Name</label>
+            <input type="text" class="form-control" name="planName" id="field_planName"
+                [(ngModel)]="stripePayment.planName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.charge" for="field_charge">Charge</label>
+            <input type="text" class="form-control" name="charge" id="field_charge"
+                [(ngModel)]="stripePayment.charge" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.created" for="field_created">Created</label>
+            <div class="d-flex">
+                <input id="field_created" type="datetime-local" class="form-control" name="created" [(ngModel)]="stripePayment.created"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                [(ngModel)]="stripePayment.amount" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planAmount" for="field_planAmount">Plan Amount</label>
+            <input type="number" class="form-control" name="planAmount" id="field_planAmount"
+                [(ngModel)]="stripePayment.planAmount" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planCreated" for="field_planCreated">Plan Created</label>
+            <div class="d-flex">
+                <input id="field_planCreated" type="datetime-local" class="form-control" name="planCreated" [(ngModel)]="stripePayment.planCreated"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planCurrency" for="field_planCurrency">Plan Currency</label>
+            <input type="text" class="form-control" name="planCurrency" id="field_planCurrency"
+                [(ngModel)]="stripePayment.planCurrency" maxlength="3"/>
+            <div [hidden]="!(editForm.controls.planCurrency?.dirty && editForm.controls.planCurrency?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.planCurrency?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 3 }">
+                   This field cannot be longer than 3 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planInterval" for="field_planInterval">Plan Interval</label>
+            <input type="text" class="form-control" name="planInterval" id="field_planInterval"
+                [(ngModel)]="stripePayment.planInterval" maxlength="50"/>
+            <div [hidden]="!(editForm.controls.planInterval?.dirty && editForm.controls.planInterval?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.planInterval?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.planIntervalCount" for="field_planIntervalCount">Plan Interval Count</label>
+            <input type="number" class="form-control" name="planIntervalCount" id="field_planIntervalCount"
+                [(ngModel)]="stripePayment.planIntervalCount" max="6"/>
+            <div [hidden]="!(editForm.controls.planIntervalCount?.dirty && editForm.controls.planIntervalCount?.invalid)">
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.planIntervalCount?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 6 }">
+                    This field cannot be more than 6.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.planIntervalCount?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.liveMode" for="field_liveMode">Live Mode</label>
+            <input type="checkbox" class="form-control" name="liveMode" id="field_liveMode"
+                [(ngModel)]="stripePayment.liveMode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.paid" for="field_paid">Paid</label>
+            <input type="checkbox" class="form-control" name="paid" id="field_paid"
+                [(ngModel)]="stripePayment.paid" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.periodEnd" for="field_periodEnd">Period End</label>
+            <div class="d-flex">
+                <input id="field_periodEnd" type="datetime-local" class="form-control" name="periodEnd" [(ngModel)]="stripePayment.periodEnd"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.periodStart" for="field_periodStart">Period Start</label>
+            <div class="d-flex">
+                <input id="field_periodStart" type="datetime-local" class="form-control" name="periodStart" [(ngModel)]="stripePayment.periodStart"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.subscriptionValue" for="field_subscriptionValue">Subscription Value</label>
+            <input type="text" class="form-control" name="subscriptionValue" id="field_subscriptionValue"
+                [(ngModel)]="stripePayment.subscriptionValue" maxlength="50"/>
+            <div [hidden]="!(editForm.controls.subscriptionValue?.dirty && editForm.controls.subscriptionValue?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.subscriptionValue?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.subtotal" for="field_subtotal">Subtotal</label>
+            <input type="number" class="form-control" name="subtotal" id="field_subtotal"
+                [(ngModel)]="stripePayment.subtotal" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.tax" for="field_tax">Tax</label>
+            <input type="text" class="form-control" name="tax" id="field_tax"
+                [(ngModel)]="stripePayment.tax" maxlength="50"/>
+            <div [hidden]="!(editForm.controls.tax?.dirty && editForm.controls.tax?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.tax?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.taxPercent" for="field_taxPercent">Tax Percent</label>
+            <input type="text" class="form-control" name="taxPercent" id="field_taxPercent"
+                [(ngModel)]="stripePayment.taxPercent" maxlength="50"/>
+            <div [hidden]="!(editForm.controls.taxPercent?.dirty && editForm.controls.taxPercent?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.taxPercent?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 50 }">
+                   This field cannot be longer than 50 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.taxDisplayName" for="field_taxDisplayName">Tax Display Name</label>
+            <input type="text" class="form-control" name="taxDisplayName" id="field_taxDisplayName"
+                [(ngModel)]="stripePayment.taxDisplayName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.total" for="field_total">Total</label>
+            <input type="number" class="form-control" name="total" id="field_total"
+                [(ngModel)]="stripePayment.total" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.currency" for="field_currency">Currency</label>
+            <input type="text" class="form-control" name="currency" id="field_currency"
+                [(ngModel)]="stripePayment.currency" maxlength="3"/>
+            <div [hidden]="!(editForm.controls.currency?.dirty && editForm.controls.currency?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.currency?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 3 }">
+                   This field cannot be longer than 3 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.stripeCode" for="field_stripeCode">Stripe Code</label>
+            <input type="text" class="form-control" name="stripeCode" id="field_stripeCode"
+                [(ngModel)]="stripePayment.stripeCode" maxlength="100"/>
+            <div [hidden]="!(editForm.controls.stripeCode?.dirty && editForm.controls.stripeCode?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.stripeCode?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 100 }">
+                   This field cannot be longer than 100 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.isSuccess" for="field_isSuccess">Is Success</label>
+            <input type="checkbox" class="form-control" name="isSuccess" id="field_isSuccess"
+                [(ngModel)]="stripePayment.isSuccess" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.invoiceNumber" for="field_invoiceNumber">Invoice Number</label>
+            <input type="text" class="form-control" name="invoiceNumber" id="field_invoiceNumber"
+                [(ngModel)]="stripePayment.invoiceNumber" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.stripePayment.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" [(ngModel)]="stripePayment.userId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

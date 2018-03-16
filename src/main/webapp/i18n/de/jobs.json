@@ -1,0 +1,27 @@
+{
+    "eLearningApp": {
+        "jobs" : {
+            "home": {
+                "title": "Jobs",
+                "createLabel": "Jobs erstellen",
+                "createOrEditLabel": "Jobs erstellen oder bearbeiten",
+                "search": "Suche nach Jobs"
+            },
+            "created": "Jobs erstellt mit ID {{ param }}",
+            "updated": "Jobs aktualisiert mit ID {{ param }}",
+            "deleted": "Jobs gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Jobs {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Jobs"
+            },
+            "name": "Name",
+            "runon": "Runon",
+            "type": "Type",
+            "cronExpress": "Cron Express",
+            "isComplete": "Is Complete",
+            "msg": "Msg"
+        }
+    }
+}

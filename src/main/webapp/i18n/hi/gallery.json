@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "gallery" : {
+            "home": {
+                "title": "Galleries",
+                "createLabel": "नया Gallery बनाएँ",
+                "createOrEditLabel": "Gallery बनाएँ या संपादित करें",
+                "search": "Gallery खोजें"
+            },
+            "created": "एक नया Gallery [identifier: {{ param }}] तैयार है",
+            "updated": "एक Gallery [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Gallery [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Gallery [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Gallery"
+            },
+            "imageUrl": "Image Url",
+            "galleryGroup": "Gallery Group"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "Education を追加",
+                "createOrEditLabel": "Educationを追加または編集",
+                "search": "Search for Education"
+            },
+            "created": "A new Education is created with identifier {{ param }}",
+            "updated": "A Education is updated with identifier {{ param }}",
+            "deleted": "A Education is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Education {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "educationCollege" : {
+            "home": {
+                "title": "EducationColleges",
+                "createLabel": "नया Education College बनाएँ",
+                "createOrEditLabel": "Education College बनाएँ या संपादित करें",
+                "search": "Education College खोजें"
+            },
+            "created": "एक नया Education College [identifier: {{ param }}] तैयार है",
+            "updated": "एक Education College [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Education College [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Education College [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Education College"
+            },
+            "name": "Name",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

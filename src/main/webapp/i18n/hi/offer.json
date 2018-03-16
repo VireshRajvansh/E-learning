@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "offer" : {
+            "home": {
+                "title": "Offers",
+                "createLabel": "नया Offer बनाएँ",
+                "createOrEditLabel": "Offer बनाएँ या संपादित करें",
+                "search": "Offer खोजें"
+            },
+            "created": "एक नया Offer [identifier: {{ param }}] तैयार है",
+            "updated": "एक Offer [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Offer [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Offer [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Offer"
+            },
+            "name": "Name"
+        }
+    }
+}

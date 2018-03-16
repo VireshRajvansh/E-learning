@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "taxRate" : {
+            "home": {
+                "title": "TaxRates",
+                "createLabel": "नया Tax Rate बनाएँ",
+                "createOrEditLabel": "Tax Rate बनाएँ या संपादित करें",
+                "search": "Tax Rate खोजें"
+            },
+            "created": "एक नया Tax Rate [identifier: {{ param }}] तैयार है",
+            "updated": "एक Tax Rate [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Tax Rate [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Tax Rate [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Tax Rate"
+            },
+            "displayName": "Display Name",
+            "totalTaxInPct": "Total Tax In Pct",
+            "stateId": "State Id"
+        }
+    }
+}

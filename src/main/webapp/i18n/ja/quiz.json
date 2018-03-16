@@ -1,0 +1,32 @@
+{
+    "eLearningApp": {
+        "quiz" : {
+            "home": {
+                "title": "Quizzes",
+                "createLabel": "Quiz を追加",
+                "createOrEditLabel": "Quizを追加または編集",
+                "search": "Search for Quiz"
+            },
+            "created": "A new Quiz is created with identifier {{ param }}",
+            "updated": "A Quiz is updated with identifier {{ param }}",
+            "deleted": "A Quiz is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Quiz {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Quiz"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "text": "Text",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "isComplete": "Is Complete",
+            "tagLine": "Tag Line",
+            "active": "Active",
+            "selected": "Selected",
+            "quizAns": "Quiz Ans",
+            "user": "User"
+        }
+    }
+}

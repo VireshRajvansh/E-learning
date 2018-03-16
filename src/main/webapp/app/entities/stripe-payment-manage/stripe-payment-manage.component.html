@@ -1,0 +1,133 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.stripePayment.home.title">Stripe Payments</span>
+        <button class="btn btn-primary float-right jh-create-entity create-stripe-payment-manage" [routerLink]="['/', { outlets: { popup: ['stripe-payment-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.stripePayment.home.createLabel">
+            Create new Stripe Payment
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.stripePayment.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="stripePayments">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="stripeCustomerId"><span jhiTranslate="eLearningApp.stripePayment.stripeCustomerId">Stripe Customer Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="invoiceId"><span jhiTranslate="eLearningApp.stripePayment.invoiceId">Invoice Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planId"><span jhiTranslate="eLearningApp.stripePayment.planId">Plan Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planName"><span jhiTranslate="eLearningApp.stripePayment.planName">Plan Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="charge"><span jhiTranslate="eLearningApp.stripePayment.charge">Charge</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="created"><span jhiTranslate="eLearningApp.stripePayment.created">Created</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span jhiTranslate="eLearningApp.stripePayment.amount">Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planAmount"><span jhiTranslate="eLearningApp.stripePayment.planAmount">Plan Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planCreated"><span jhiTranslate="eLearningApp.stripePayment.planCreated">Plan Created</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planCurrency"><span jhiTranslate="eLearningApp.stripePayment.planCurrency">Plan Currency</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planInterval"><span jhiTranslate="eLearningApp.stripePayment.planInterval">Plan Interval</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="planIntervalCount"><span jhiTranslate="eLearningApp.stripePayment.planIntervalCount">Plan Interval Count</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="liveMode"><span jhiTranslate="eLearningApp.stripePayment.liveMode">Live Mode</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="paid"><span jhiTranslate="eLearningApp.stripePayment.paid">Paid</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="periodEnd"><span jhiTranslate="eLearningApp.stripePayment.periodEnd">Period End</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="periodStart"><span jhiTranslate="eLearningApp.stripePayment.periodStart">Period Start</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="subscriptionValue"><span jhiTranslate="eLearningApp.stripePayment.subscriptionValue">Subscription Value</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="subtotal"><span jhiTranslate="eLearningApp.stripePayment.subtotal">Subtotal</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="tax"><span jhiTranslate="eLearningApp.stripePayment.tax">Tax</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="taxPercent"><span jhiTranslate="eLearningApp.stripePayment.taxPercent">Tax Percent</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="taxDisplayName"><span jhiTranslate="eLearningApp.stripePayment.taxDisplayName">Tax Display Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="total"><span jhiTranslate="eLearningApp.stripePayment.total">Total</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="currency"><span jhiTranslate="eLearningApp.stripePayment.currency">Currency</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="stripeCode"><span jhiTranslate="eLearningApp.stripePayment.stripeCode">Stripe Code</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isSuccess"><span jhiTranslate="eLearningApp.stripePayment.isSuccess">Is Success</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="invoiceNumber"><span jhiTranslate="eLearningApp.stripePayment.invoiceNumber">Invoice Number</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="userId"><span jhiTranslate="eLearningApp.stripePayment.user">User</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let stripePayment of stripePayments ;trackBy: trackId">
+                <td><a [routerLink]="['../stripe-payment-manage', stripePayment.id ]">{{stripePayment.id}}</a></td>
+                <td>{{stripePayment.stripeCustomerId}}</td>
+                <td>{{stripePayment.invoiceId}}</td>
+                <td>{{stripePayment.planId}}</td>
+                <td>{{stripePayment.planName}}</td>
+                <td>{{stripePayment.charge}}</td>
+                <td>{{stripePayment.created | date:'medium'}}</td>
+                <td>{{stripePayment.amount}}</td>
+                <td>{{stripePayment.planAmount}}</td>
+                <td>{{stripePayment.planCreated | date:'medium'}}</td>
+                <td>{{stripePayment.planCurrency}}</td>
+                <td>{{stripePayment.planInterval}}</td>
+                <td>{{stripePayment.planIntervalCount}}</td>
+                <td>{{stripePayment.liveMode}}</td>
+                <td>{{stripePayment.paid}}</td>
+                <td>{{stripePayment.periodEnd | date:'medium'}}</td>
+                <td>{{stripePayment.periodStart | date:'medium'}}</td>
+                <td>{{stripePayment.subscriptionValue}}</td>
+                <td>{{stripePayment.subtotal}}</td>
+                <td>{{stripePayment.tax}}</td>
+                <td>{{stripePayment.taxPercent}}</td>
+                <td>{{stripePayment.taxDisplayName}}</td>
+                <td>{{stripePayment.total}}</td>
+                <td>{{stripePayment.currency}}</td>
+                <td>{{stripePayment.stripeCode}}</td>
+                <td>{{stripePayment.isSuccess}}</td>
+                <td>{{stripePayment.invoiceNumber}}</td>
+                <td>
+                    {{stripePayment.userId}}
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../stripe-payment-manage', stripePayment.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'stripe-payment-manage/'+ stripePayment.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'stripe-payment-manage/'+ stripePayment.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="stripePayments && stripePayments.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

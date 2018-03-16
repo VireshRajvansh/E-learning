@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "QuizAns",
+                "createLabel": "Créer un nouveau Quiz Ans",
+                "createOrEditLabel": "Créer ou éditer un Quiz Ans",
+                "search": "Recherche pour Quiz Ans"
+            },
+            "created": "Un nouveau Quiz Ans a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Quiz Ans avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Quiz Ans avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Quiz Ans {{ id }} ?"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

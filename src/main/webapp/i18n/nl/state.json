@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "state" : {
+            "home": {
+                "title": "States",
+                "createLabel": "Maak een nieuwe State",
+                "createOrEditLabel": "Maak of wijzig een State",
+                "search": "Search for State"
+            },
+            "created": "A new State is created with identifier {{ param }}",
+            "updated": "A State is updated with identifier {{ param }}",
+            "deleted": "A State is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u State {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "State"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "city": "City"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+
+<div *ngIf="jobs">
+    <h2><span jhiTranslate="eLearningApp.jobs.detail.title">Jobs</span> {{jobs.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.jobs.name">Name</span></dt>
+        <dd>
+            <span>{{jobs.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.jobs.runon">Runon</span></dt>
+        <dd>
+            <span>{{jobs.runon | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.jobs.type">Type</span></dt>
+        <dd>
+            <span>{{jobs.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.jobs.cronExpress">Cron Express</span></dt>
+        <dd>
+            <span>{{jobs.cronExpress}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.jobs.isComplete">Is Complete</span></dt>
+        <dd>
+            <span>{{jobs.isComplete}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.jobs.msg">Msg</span></dt>
+        <dd>
+            <span>{{jobs.msg}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'jobs-manage/'+ jobs.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

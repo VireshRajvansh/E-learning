@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "state" : {
+            "home": {
+                "title": "States",
+                "createLabel": "नया State बनाएँ",
+                "createOrEditLabel": "State बनाएँ या संपादित करें",
+                "search": "State खोजें"
+            },
+            "created": "एक नया State [identifier: {{ param }}] तैयार है",
+            "updated": "एक State [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "State [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "State [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "State"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "city": "City"
+        }
+    }
+}

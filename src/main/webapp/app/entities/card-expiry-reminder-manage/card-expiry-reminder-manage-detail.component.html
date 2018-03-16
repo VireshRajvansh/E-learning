@@ -1,0 +1,42 @@
+
+<div *ngIf="cardExpiryReminder">
+    <h2><span jhiTranslate="eLearningApp.cardExpiryReminder.detail.title">Card Expiry Reminder</span> {{cardExpiryReminder.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.cardExpiryReminder.userId">User Id</span></dt>
+        <dd>
+            <span>{{cardExpiryReminder.userId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.cardExpiryReminder.messageType">Message Type</span></dt>
+        <dd>
+            <span>{{cardExpiryReminder.messageType}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.cardExpiryReminder.sendOnDate">Send On Date</span></dt>
+        <dd>
+            <span>{{cardExpiryReminder.sendOnDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.cardExpiryReminder.isComplete">Is Complete</span></dt>
+        <dd>
+            <span>{{cardExpiryReminder.isComplete}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.cardExpiryReminder.refData">Ref Data</span></dt>
+        <dd>
+            <span>{{cardExpiryReminder.refData}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'card-expiry-reminder-manage/'+ cardExpiryReminder.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

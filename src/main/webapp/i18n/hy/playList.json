@@ -1,0 +1,28 @@
+{
+    "eLearningApp": {
+        "playList" : {
+            "home": {
+                "title": "Play Lists",
+                "createLabel": "Ստեղծել նոր Play List",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Play List",
+                "search": "Գտնել Play List"
+            },
+            "created": "Նոր Play List ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Play List թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Play List հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Play List {{ id }}?"
+            },
+            "detail": {
+                "title": "Play List"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "length": "Length",
+            "duration": "Duration",
+            "tagLine": "Tag Line",
+            "active": "Active"
+        }
+    }
+}

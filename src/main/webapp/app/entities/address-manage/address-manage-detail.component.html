@@ -1,0 +1,62 @@
+
+<div *ngIf="address">
+    <h2><span jhiTranslate="eLearningApp.address.detail.title">Address</span> {{address.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.address.type">Type</span></dt>
+        <dd>
+            <span>{{address.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.addressLine1">Address Line 1</span></dt>
+        <dd>
+            <span>{{address.addressLine1}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.addressLine2">Address Line 2</span></dt>
+        <dd>
+            <span>{{address.addressLine2}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.zipCode">Zip Code</span></dt>
+        <dd>
+            <span>{{address.zipCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.city">City</span></dt>
+        <dd>
+            <span>{{address.city}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.state">State</span></dt>
+        <dd>
+            <span>{{address.state}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.landmark">Landmark</span></dt>
+        <dd>
+            <span>{{address.landmark}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.country">Country</span></dt>
+        <dd>
+            <span>{{address.country}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.lat">Lat</span></dt>
+        <dd>
+            <span>{{address.lat}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.address.lng">Lng</span></dt>
+        <dd>
+            <span>{{address.lng}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'address-manage/'+ address.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

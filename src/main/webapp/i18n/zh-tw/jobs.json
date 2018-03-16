@@ -1,0 +1,27 @@
+{
+    "eLearningApp": {
+        "jobs" : {
+            "home": {
+                "title": "Jobs",
+                "createLabel": "建立一筆新的 Jobs",
+                "createOrEditLabel": "建立或編輯 Jobs",
+                "search": "搜尋 Jobs"
+            },
+            "created": "新的 Jobs 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Jobs 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Jobs 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Jobs {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Jobs"
+            },
+            "name": "Name",
+            "runon": "Runon",
+            "type": "Type",
+            "cronExpress": "Cron Express",
+            "isComplete": "Is Complete",
+            "msg": "Msg"
+        }
+    }
+}

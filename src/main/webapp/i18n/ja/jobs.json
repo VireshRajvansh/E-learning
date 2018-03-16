@@ -1,0 +1,27 @@
+{
+    "eLearningApp": {
+        "jobs" : {
+            "home": {
+                "title": "Jobs",
+                "createLabel": "Jobs を追加",
+                "createOrEditLabel": "Jobsを追加または編集",
+                "search": "Search for Jobs"
+            },
+            "created": "A new Jobs is created with identifier {{ param }}",
+            "updated": "A Jobs is updated with identifier {{ param }}",
+            "deleted": "A Jobs is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Jobs {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Jobs"
+            },
+            "name": "Name",
+            "runon": "Runon",
+            "type": "Type",
+            "cronExpress": "Cron Express",
+            "isComplete": "Is Complete",
+            "msg": "Msg"
+        }
+    }
+}

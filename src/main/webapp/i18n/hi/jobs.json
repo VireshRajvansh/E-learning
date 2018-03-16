@@ -1,0 +1,27 @@
+{
+    "eLearningApp": {
+        "jobs" : {
+            "home": {
+                "title": "Jobs",
+                "createLabel": "नया Jobs बनाएँ",
+                "createOrEditLabel": "Jobs बनाएँ या संपादित करें",
+                "search": "Jobs खोजें"
+            },
+            "created": "एक नया Jobs [identifier: {{ param }}] तैयार है",
+            "updated": "एक Jobs [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Jobs [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Jobs [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Jobs"
+            },
+            "name": "Name",
+            "runon": "Runon",
+            "type": "Type",
+            "cronExpress": "Cron Express",
+            "isComplete": "Is Complete",
+            "msg": "Msg"
+        }
+    }
+}

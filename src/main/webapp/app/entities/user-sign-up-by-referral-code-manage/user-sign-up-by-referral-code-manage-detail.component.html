@@ -1,0 +1,30 @@
+
+<div *ngIf="userSignUpByReferralCode">
+    <h2><span jhiTranslate="eLearningApp.userSignUpByReferralCode.detail.title">User Sign Up By Referral Code</span> {{userSignUpByReferralCode.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.userSignUpByReferralCode.referralCode">Referral Code</span></dt>
+        <dd>
+            <span>{{userSignUpByReferralCode.referralCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.userSignUpByReferralCode.user">User</span></dt>
+        <dd>
+            {{userSignUpByReferralCode.userId}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'user-sign-up-by-referral-code-manage/'+ userSignUpByReferralCode.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "quizAns" : {
+            "home": {
+                "title": "QuizAns",
+                "createLabel": "Quiz Ans を追加",
+                "createOrEditLabel": "Quiz Ansを追加または編集",
+                "search": "Search for Quiz Ans"
+            },
+            "created": "A new Quiz Ans is created with identifier {{ param }}",
+            "updated": "A Quiz Ans is updated with identifier {{ param }}",
+            "deleted": "A Quiz Ans is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Quiz Ans {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Quiz Ans"
+            },
+            "answers": "Answers",
+            "quiz": "Quiz"
+        }
+    }
+}

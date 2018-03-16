@@ -1,0 +1,68 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "quizAns",
+            "otherEntityName": "quizAns",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "quiz"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slug",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "text",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shortDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isComplete",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tagLine",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "selected",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180316113858",
+    "entityTableName": "quiz",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "educationCollege" : {
+            "home": {
+                "title": "EducationColleges",
+                "createLabel": "Genera un nuovo Education College",
+                "createOrEditLabel": "Genera o modifica un Education College",
+                "search": "Cerca Education College"
+            },
+            "created": "&Egrave; stato generato un nuovo Education College con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Education College identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Education College con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Education College {{ id }}?"
+            },
+            "detail": {
+                "title": "Education College"
+            },
+            "name": "Name",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

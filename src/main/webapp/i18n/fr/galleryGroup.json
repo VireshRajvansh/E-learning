@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "galleryGroup" : {
+            "home": {
+                "title": "GalleryGroups",
+                "createLabel": "Créer un nouveau Gallery Group",
+                "createOrEditLabel": "Créer ou éditer un Gallery Group",
+                "search": "Recherche pour Gallery Group"
+            },
+            "created": "Un nouveau Gallery Group a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Gallery Group avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Gallery Group avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Gallery Group {{ id }} ?"
+            },
+            "detail": {
+                "title": "Gallery Group"
+            },
+            "name": "Name",
+            "gallery": "Gallery"
+        }
+    }
+}

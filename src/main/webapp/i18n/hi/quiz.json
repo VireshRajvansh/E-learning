@@ -1,0 +1,32 @@
+{
+    "eLearningApp": {
+        "quiz" : {
+            "home": {
+                "title": "Quizzes",
+                "createLabel": "नया Quiz बनाएँ",
+                "createOrEditLabel": "Quiz बनाएँ या संपादित करें",
+                "search": "Quiz खोजें"
+            },
+            "created": "एक नया Quiz [identifier: {{ param }}] तैयार है",
+            "updated": "एक Quiz [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Quiz [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Quiz [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Quiz"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "text": "Text",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "isComplete": "Is Complete",
+            "tagLine": "Tag Line",
+            "active": "Active",
+            "selected": "Selected",
+            "quizAns": "Quiz Ans",
+            "user": "User"
+        }
+    }
+}

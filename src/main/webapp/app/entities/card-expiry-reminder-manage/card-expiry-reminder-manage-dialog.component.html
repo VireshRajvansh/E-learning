@@ -1,0 +1,55 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myCardExpiryReminderLabel" jhiTranslate="eLearningApp.cardExpiryReminder.home.createOrEditLabel">Create or edit a Card Expiry Reminder</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!cardExpiryReminder.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="cardExpiryReminder.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.cardExpiryReminder.userId" for="field_userId">User Id</label>
+            <input type="number" class="form-control" name="userId" id="field_userId"
+                [(ngModel)]="cardExpiryReminder.userId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.cardExpiryReminder.messageType" for="field_messageType">Message Type</label>
+            <input type="text" class="form-control" name="messageType" id="field_messageType"
+                [(ngModel)]="cardExpiryReminder.messageType" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.cardExpiryReminder.sendOnDate" for="field_sendOnDate">Send On Date</label>
+            <div class="input-group">
+                <input id="field_sendOnDate" type="text" class="form-control" name="sendOnDate" ngbDatepicker  #sendOnDateDp="ngbDatepicker" [(ngModel)]="cardExpiryReminder.sendOnDate"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="sendOnDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.cardExpiryReminder.isComplete" for="field_isComplete">Is Complete</label>
+            <input type="checkbox" class="form-control" name="isComplete" id="field_isComplete"
+                [(ngModel)]="cardExpiryReminder.isComplete" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eLearningApp.cardExpiryReminder.refData" for="field_refData">Ref Data</label>
+            <input type="text" class="form-control" name="refData" id="field_refData"
+                [(ngModel)]="cardExpiryReminder.refData" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

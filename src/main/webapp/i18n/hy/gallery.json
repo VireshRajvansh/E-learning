@@ -1,0 +1,23 @@
+{
+    "eLearningApp": {
+        "gallery" : {
+            "home": {
+                "title": "Galleries",
+                "createLabel": "Ստեղծել նոր Gallery",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Gallery",
+                "search": "Գտնել Gallery"
+            },
+            "created": "Նոր Gallery ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Gallery թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Gallery հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Gallery {{ id }}?"
+            },
+            "detail": {
+                "title": "Gallery"
+            },
+            "imageUrl": "Image Url",
+            "galleryGroup": "Gallery Group"
+        }
+    }
+}

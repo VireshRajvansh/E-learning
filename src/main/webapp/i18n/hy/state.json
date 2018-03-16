@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "state" : {
+            "home": {
+                "title": "States",
+                "createLabel": "Ստեղծել նոր State",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել State",
+                "search": "Գտնել State"
+            },
+            "created": "Նոր State ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "State թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "State հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել State {{ id }}?"
+            },
+            "detail": {
+                "title": "State"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "city": "City"
+        }
+    }
+}

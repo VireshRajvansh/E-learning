@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "messageType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sendOnDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "isComplete",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "refData",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180316113912",
+    "entityTableName": "card_expiry_reminder",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

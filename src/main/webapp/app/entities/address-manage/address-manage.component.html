@@ -1,0 +1,97 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.address.home.title">Addresses</span>
+        <button class="btn btn-primary float-right jh-create-entity create-address-manage" [routerLink]="['/', { outlets: { popup: ['address-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.address.home.createLabel">
+            Create new Address
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.address.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="addresses">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="eLearningApp.address.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="addressLine1"><span jhiTranslate="eLearningApp.address.addressLine1">Address Line 1</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="addressLine2"><span jhiTranslate="eLearningApp.address.addressLine2">Address Line 2</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="zipCode"><span jhiTranslate="eLearningApp.address.zipCode">Zip Code</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="city"><span jhiTranslate="eLearningApp.address.city">City</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="state"><span jhiTranslate="eLearningApp.address.state">State</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="landmark"><span jhiTranslate="eLearningApp.address.landmark">Landmark</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="country"><span jhiTranslate="eLearningApp.address.country">Country</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="lat"><span jhiTranslate="eLearningApp.address.lat">Lat</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="lng"><span jhiTranslate="eLearningApp.address.lng">Lng</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let address of addresses ;trackBy: trackId">
+                <td><a [routerLink]="['../address-manage', address.id ]">{{address.id}}</a></td>
+                <td>{{address.type}}</td>
+                <td>{{address.addressLine1}}</td>
+                <td>{{address.addressLine2}}</td>
+                <td>{{address.zipCode}}</td>
+                <td>{{address.city}}</td>
+                <td>{{address.state}}</td>
+                <td>{{address.landmark}}</td>
+                <td>{{address.country}}</td>
+                <td>{{address.lat}}</td>
+                <td>{{address.lng}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../address-manage', address.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'address-manage/'+ address.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'address-manage/'+ address.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="addresses && addresses.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

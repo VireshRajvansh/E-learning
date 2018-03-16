@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "Ստեղծել նոր Education",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Education",
+                "search": "Գտնել Education"
+            },
+            "created": "Նոր Education ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Education թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Education հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Education {{ id }}?"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "eLearningApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Genera un nuovo Course",
+                "createOrEditLabel": "Genera o modifica un Course",
+                "search": "Cerca Course"
+            },
+            "created": "&Egrave; stato generato un nuovo Course con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Course identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Course con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "slug": "Slug",
+            "type": "Type",
+            "shortDesc": "Short Desc",
+            "categories": "Categories",
+            "active": "Active",
+            "premium": "Premium",
+            "courseHrs": "Course Hrs",
+            "tagLine": "Tag Line",
+            "premiumTill": "Premium Till",
+            "playlist": "Playlist",
+            "user": "User"
+        }
+    }
+}

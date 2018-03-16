@@ -1,0 +1,130 @@
+
+<div *ngIf="stripePayment">
+    <h2><span jhiTranslate="eLearningApp.stripePayment.detail.title">Stripe Payment</span> {{stripePayment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eLearningApp.stripePayment.stripeCustomerId">Stripe Customer Id</span></dt>
+        <dd>
+            <span>{{stripePayment.stripeCustomerId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.invoiceId">Invoice Id</span></dt>
+        <dd>
+            <span>{{stripePayment.invoiceId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planId">Plan Id</span></dt>
+        <dd>
+            <span>{{stripePayment.planId}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planName">Plan Name</span></dt>
+        <dd>
+            <span>{{stripePayment.planName}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.charge">Charge</span></dt>
+        <dd>
+            <span>{{stripePayment.charge}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.created">Created</span></dt>
+        <dd>
+            <span>{{stripePayment.created | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.amount">Amount</span></dt>
+        <dd>
+            <span>{{stripePayment.amount}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planAmount">Plan Amount</span></dt>
+        <dd>
+            <span>{{stripePayment.planAmount}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planCreated">Plan Created</span></dt>
+        <dd>
+            <span>{{stripePayment.planCreated | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planCurrency">Plan Currency</span></dt>
+        <dd>
+            <span>{{stripePayment.planCurrency}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planInterval">Plan Interval</span></dt>
+        <dd>
+            <span>{{stripePayment.planInterval}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.planIntervalCount">Plan Interval Count</span></dt>
+        <dd>
+            <span>{{stripePayment.planIntervalCount}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.liveMode">Live Mode</span></dt>
+        <dd>
+            <span>{{stripePayment.liveMode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.paid">Paid</span></dt>
+        <dd>
+            <span>{{stripePayment.paid}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.periodEnd">Period End</span></dt>
+        <dd>
+            <span>{{stripePayment.periodEnd | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.periodStart">Period Start</span></dt>
+        <dd>
+            <span>{{stripePayment.periodStart | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.subscriptionValue">Subscription Value</span></dt>
+        <dd>
+            <span>{{stripePayment.subscriptionValue}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.subtotal">Subtotal</span></dt>
+        <dd>
+            <span>{{stripePayment.subtotal}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.tax">Tax</span></dt>
+        <dd>
+            <span>{{stripePayment.tax}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.taxPercent">Tax Percent</span></dt>
+        <dd>
+            <span>{{stripePayment.taxPercent}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.taxDisplayName">Tax Display Name</span></dt>
+        <dd>
+            <span>{{stripePayment.taxDisplayName}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.total">Total</span></dt>
+        <dd>
+            <span>{{stripePayment.total}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.currency">Currency</span></dt>
+        <dd>
+            <span>{{stripePayment.currency}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.stripeCode">Stripe Code</span></dt>
+        <dd>
+            <span>{{stripePayment.stripeCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.isSuccess">Is Success</span></dt>
+        <dd>
+            <span>{{stripePayment.isSuccess}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.invoiceNumber">Invoice Number</span></dt>
+        <dd>
+            <span>{{stripePayment.invoiceNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="eLearningApp.stripePayment.user">User</span></dt>
+        <dd>
+            {{stripePayment.userId}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'stripe-payment-manage/'+ stripePayment.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

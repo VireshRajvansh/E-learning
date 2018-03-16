@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "services" : {
+            "home": {
+                "title": "Services",
+                "createLabel": "Ստեղծել նոր Services",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Services",
+                "search": "Գտնել Services"
+            },
+            "created": "Նոր Services ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Services թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Services հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Services {{ id }}?"
+            },
+            "detail": {
+                "title": "Services"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "educationCollege" : {
+            "home": {
+                "title": "EducationColleges",
+                "createLabel": "Education College を追加",
+                "createOrEditLabel": "Education Collegeを追加または編集",
+                "search": "Search for Education College"
+            },
+            "created": "A new Education College is created with identifier {{ param }}",
+            "updated": "A Education College is updated with identifier {{ param }}",
+            "deleted": "A Education College is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Education College {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Education College"
+            },
+            "name": "Name",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

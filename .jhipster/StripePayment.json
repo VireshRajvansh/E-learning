@@ -1,0 +1,162 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "stripePayment"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "stripeCustomerId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "invoiceId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "planId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "planName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "charge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "created",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "planAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "planCreated",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "planCurrency",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 3
+        },
+        {
+            "fieldName": "planInterval",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "planIntervalCount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 6
+        },
+        {
+            "fieldName": "liveMode",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "paid",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "periodEnd",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "periodStart",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "subscriptionValue",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "subtotal",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "tax",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "taxPercent",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "taxDisplayName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 3
+        },
+        {
+            "fieldName": "stripeCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "isSuccess",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "invoiceNumber",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180316113910",
+    "entityTableName": "stripe_payment",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "-manage"
+}

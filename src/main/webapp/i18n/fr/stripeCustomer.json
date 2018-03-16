@@ -1,0 +1,39 @@
+{
+    "eLearningApp": {
+        "stripeCustomer" : {
+            "home": {
+                "title": "StripeCustomers",
+                "createLabel": "Créer un nouveau Stripe Customer",
+                "createOrEditLabel": "Créer ou éditer un Stripe Customer",
+                "search": "Recherche pour Stripe Customer"
+            },
+            "created": "Un nouveau Stripe Customer a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Stripe Customer avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Stripe Customer avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Stripe Customer {{ id }} ?"
+            },
+            "detail": {
+                "title": "Stripe Customer"
+            },
+            "name": "Name",
+            "created": "Created",
+            "email": "Email",
+            "currency": "Currency",
+            "stripeCustomerId": "Stripe Customer Id",
+            "stripeSubscriptionId": "Stripe Subscription Id",
+            "stripeStatus": "Stripe Status",
+            "plan": "Plan",
+            "ccBrand": "Cc Brand",
+            "ccLast4": "Cc Last 4",
+            "expMonth": "Exp Month",
+            "expYear": "Exp Year",
+            "isCancelled": "Is Cancelled",
+            "cardId": "Card Id",
+            "expectedExpiryDate": "Expected Expiry Date",
+            "user": "User",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

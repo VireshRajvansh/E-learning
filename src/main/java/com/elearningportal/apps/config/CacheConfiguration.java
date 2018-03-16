@@ -46,6 +46,33 @@ public class CacheConfiguration {
             cm.createCache(com.elearningportal.apps.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.elearningportal.apps.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.elearningportal.apps.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Student.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Teacher.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Address.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.State.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.State.class.getName() + ".cities", jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.City.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Course.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.PlayList.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Quiz.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.QuizAns.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Article.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Education.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.EducationCollege.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.EducationCollege.class.getName() + ".students", jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.EducationCollege.class.getName() + ".teachers", jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Gallery.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.GalleryGroup.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.GalleryGroup.class.getName() + ".galleries", jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Services.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Offer.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.Jobs.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.TaxRate.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.StripeCustomer.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.StripePayment.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.StripeTransaction.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.CardExpiryReminder.class.getName(), jcacheConfiguration);
+            cm.createCache(com.elearningportal.apps.domain.UserSignUpByReferralCode.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

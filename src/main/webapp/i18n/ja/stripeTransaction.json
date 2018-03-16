@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "stripeTransaction" : {
+            "home": {
+                "title": "StripeTransactions",
+                "createLabel": "Stripe Transaction を追加",
+                "createOrEditLabel": "Stripe Transactionを追加または編集",
+                "search": "Search for Stripe Transaction"
+            },
+            "created": "A new Stripe Transaction is created with identifier {{ param }}",
+            "updated": "A Stripe Transaction is updated with identifier {{ param }}",
+            "deleted": "A Stripe Transaction is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Stripe Transaction {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Stripe Transaction"
+            },
+            "stripResponse": "Strip Response"
+        }
+    }
+}

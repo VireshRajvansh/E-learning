@@ -1,0 +1,26 @@
+{
+    "eLearningApp": {
+        "cardExpiryReminder" : {
+            "home": {
+                "title": "Card Expiry Reminders",
+                "createLabel": "建立一筆新的 Card Expiry Reminder",
+                "createOrEditLabel": "建立或編輯 Card Expiry Reminder",
+                "search": "搜尋 Card Expiry Reminder"
+            },
+            "created": "新的 Card Expiry Reminder 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Card Expiry Reminder 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Card Expiry Reminder 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Card Expiry Reminder {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Card Expiry Reminder"
+            },
+            "userId": "User Id",
+            "messageType": "Message Type",
+            "sendOnDate": "Send On Date",
+            "isComplete": "Is Complete",
+            "refData": "Ref Data"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "eLearningApp": {
+        "address" : {
+            "home": {
+                "title": "Addresses",
+                "createLabel": "建立一筆新的 Address",
+                "createOrEditLabel": "建立或編輯 Address",
+                "search": "搜尋 Address"
+            },
+            "created": "新的 Address 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Address 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Address 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Address {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Address"
+            },
+            "type": "Type",
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "zipCode": "Zip Code",
+            "city": "City",
+            "state": "State",
+            "landmark": "Landmark",
+            "country": "Country",
+            "lat": "Lat",
+            "lng": "Lng"
+        }
+    }
+}

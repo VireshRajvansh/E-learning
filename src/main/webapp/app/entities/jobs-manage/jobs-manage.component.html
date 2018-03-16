@@ -1,0 +1,89 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.jobs.home.title">Jobs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-jobs-manage" [routerLink]="['/', { outlets: { popup: ['jobs-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.jobs.home.createLabel">
+            Create new Jobs
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.jobs.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="jobs">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="eLearningApp.jobs.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="runon"><span jhiTranslate="eLearningApp.jobs.runon">Runon</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="eLearningApp.jobs.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="cronExpress"><span jhiTranslate="eLearningApp.jobs.cronExpress">Cron Express</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isComplete"><span jhiTranslate="eLearningApp.jobs.isComplete">Is Complete</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="msg"><span jhiTranslate="eLearningApp.jobs.msg">Msg</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let jobs of jobs ;trackBy: trackId">
+                <td><a [routerLink]="['../jobs-manage', jobs.id ]">{{jobs.id}}</a></td>
+                <td>{{jobs.name}}</td>
+                <td>{{jobs.runon | date:'mediumDate'}}</td>
+                <td>{{jobs.type}}</td>
+                <td>{{jobs.cronExpress}}</td>
+                <td>{{jobs.isComplete}}</td>
+                <td>{{jobs.msg}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../jobs-manage', jobs.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'jobs-manage/'+ jobs.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'jobs-manage/'+ jobs.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="jobs && jobs.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

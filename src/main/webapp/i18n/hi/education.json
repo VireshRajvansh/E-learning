@@ -1,0 +1,22 @@
+{
+    "eLearningApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "नया Education बनाएँ",
+                "createOrEditLabel": "Education बनाएँ या संपादित करें",
+                "search": "Education खोजें"
+            },
+            "created": "एक नया Education [identifier: {{ param }}] तैयार है",
+            "updated": "एक Education [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Education [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Education [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name"
+        }
+    }
+}

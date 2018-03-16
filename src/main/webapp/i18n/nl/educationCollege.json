@@ -1,0 +1,24 @@
+{
+    "eLearningApp": {
+        "educationCollege" : {
+            "home": {
+                "title": "Education Colleges",
+                "createLabel": "Maak een nieuwe Education College",
+                "createOrEditLabel": "Maak of wijzig een Education College",
+                "search": "Search for Education College"
+            },
+            "created": "A new Education College is created with identifier {{ param }}",
+            "updated": "A Education College is updated with identifier {{ param }}",
+            "deleted": "A Education College is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Education College {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Education College"
+            },
+            "name": "Name",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}

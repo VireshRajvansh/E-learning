@@ -1,0 +1,105 @@
+<div>
+    <h2>
+        <span jhiTranslate="eLearningApp.quiz.home.title">Quizzes</span>
+        <button class="btn btn-primary float-right jh-create-entity create-quiz-manage" [routerLink]="['/', { outlets: { popup: ['quiz-manage-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="eLearningApp.quiz.home.createLabel">
+            Create new Quiz
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'eLearningApp.quiz.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="quizzes">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="eLearningApp.quiz.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="slug"><span jhiTranslate="eLearningApp.quiz.slug">Slug</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="text"><span jhiTranslate="eLearningApp.quiz.text">Text</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="eLearningApp.quiz.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="shortDesc"><span jhiTranslate="eLearningApp.quiz.shortDesc">Short Desc</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isComplete"><span jhiTranslate="eLearningApp.quiz.isComplete">Is Complete</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="tagLine"><span jhiTranslate="eLearningApp.quiz.tagLine">Tag Line</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="active"><span jhiTranslate="eLearningApp.quiz.active">Active</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="selected"><span jhiTranslate="eLearningApp.quiz.selected">Selected</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="quizAnsId"><span jhiTranslate="eLearningApp.quiz.quizAns">Quiz Ans</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="userLogin"><span jhiTranslate="eLearningApp.quiz.user">User</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let quiz of quizzes ;trackBy: trackId">
+                <td><a [routerLink]="['../quiz-manage', quiz.id ]">{{quiz.id}}</a></td>
+                <td>{{quiz.name}}</td>
+                <td>{{quiz.slug}}</td>
+                <td>{{quiz.text}}</td>
+                <td>{{quiz.type}}</td>
+                <td>{{quiz.shortDesc}}</td>
+                <td>{{quiz.isComplete}}</td>
+                <td>{{quiz.tagLine}}</td>
+                <td>{{quiz.active}}</td>
+                <td>{{quiz.selected}}</td>
+                <td>
+                    <div *ngIf="quiz.quizAnsId">
+                        <a [routerLink]="['../quiz-ans-manage', quiz.quizAnsId  ]" >{{quiz.quizAnsId}}</a>
+                    </div>
+                </td>
+                <td>
+                    {{quiz.userLogin}}
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../quiz-manage', quiz.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'quiz-manage/'+ quiz.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'quiz-manage/'+ quiz.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="quizzes && quizzes.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{
+    "eLearningApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Ստեղծել նոր Student",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Student",
+                "search": "Գտնել Student"
+            },
+            "created": "Նոր Student ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Student թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Student հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "about": "About",
+            "imageUrl": "Image Url",
+            "collegeYear": "College Year",
+            "dob": "Dob",
+            "mobile": "Mobile",
+            "alternativeMobile": "Alternative Mobile",
+            "premium": "Premium",
+            "active": "Active",
+            "languagesSpoken": "Languages Spoken",
+            "slug": "Slug",
+            "premiumTill": "Premium Till",
+            "referenceCode": "Reference Code",
+            "signUpByReferenceCode": "Sign Up By Reference Code",
+            "websiteURL": "Website URL",
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "googlePlus": "Google Plus",
+            "linkedIn": "Linked In",
+            "stripeCustomer": "Stripe Customer",
+            "user": "User",
+            "address": "Address",
+            "college": "College"
+        }
+    }
+}

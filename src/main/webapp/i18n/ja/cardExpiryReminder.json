@@ -1,0 +1,26 @@
+{
+    "eLearningApp": {
+        "cardExpiryReminder" : {
+            "home": {
+                "title": "CardExpiryReminders",
+                "createLabel": "Card Expiry Reminder を追加",
+                "createOrEditLabel": "Card Expiry Reminderを追加または編集",
+                "search": "Search for Card Expiry Reminder"
+            },
+            "created": "A new Card Expiry Reminder is created with identifier {{ param }}",
+            "updated": "A Card Expiry Reminder is updated with identifier {{ param }}",
+            "deleted": "A Card Expiry Reminder is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Card Expiry Reminder {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Card Expiry Reminder"
+            },
+            "userId": "User Id",
+            "messageType": "Message Type",
+            "sendOnDate": "Send On Date",
+            "isComplete": "Is Complete",
+            "refData": "Ref Data"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "eLearningApp": {
+        "stripeCustomer" : {
+            "home": {
+                "title": "StripeCustomers",
+                "createLabel": "नया Stripe Customer बनाएँ",
+                "createOrEditLabel": "Stripe Customer बनाएँ या संपादित करें",
+                "search": "Stripe Customer खोजें"
+            },
+            "created": "एक नया Stripe Customer [identifier: {{ param }}] तैयार है",
+            "updated": "एक Stripe Customer [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Stripe Customer [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Stripe Customer [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Stripe Customer"
+            },
+            "name": "Name",
+            "created": "Created",
+            "email": "Email",
+            "currency": "Currency",
+            "stripeCustomerId": "Stripe Customer Id",
+            "stripeSubscriptionId": "Stripe Subscription Id",
+            "stripeStatus": "Stripe Status",
+            "plan": "Plan",
+            "ccBrand": "Cc Brand",
+            "ccLast4": "Cc Last 4",
+            "expMonth": "Exp Month",
+            "expYear": "Exp Year",
+            "isCancelled": "Is Cancelled",
+            "cardId": "Card Id",
+            "expectedExpiryDate": "Expected Expiry Date",
+            "user": "User",
+            "student": "Student",
+            "teacher": "Teacher"
+        }
+    }
+}
